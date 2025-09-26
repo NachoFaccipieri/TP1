@@ -21,12 +21,14 @@ async function updateCharts() {
     // Extraer datos para los gráficos
     const timestamps = data.map(d => new Date(d.timestamp * 1000).toLocaleTimeString());
     const temperatures = data.map(d => d.temperature.toFixed(2));
+    const luz = data.map(d => d.luz.toFixed(2));
     const humAir = data.map(d => d.humidity_air.toFixed(2));
     const humSoil = data.map(d => d.humidity_soil.toFixed(2));
 
     // Mostrar el último valor en vivo
     const latestData = data[data.length - 1];
     document.getElementById('temp-value').innerText = `${latestData.temperature.toFixed(1)} °C`;
+    document.getElementById('light-value').innerText = `${latestData.luz.toFixed(1)} luz`;
     document.getElementById('hum-air-value').innerText = `${latestData.humidity_air.toFixed(1)} %`;
     document.getElementById('hum-soil-value').innerText = `${latestData.humidity_soil.toFixed(1)} %`;
 
@@ -38,6 +40,21 @@ async function updateCharts() {
             datasets: [{
                 label: 'Temperatura (°C)',
                 data: temperatures,
+                borderColor: 'red',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderWidth: 1
+            }]
+        }
+    });
+
+    // Gráfico de la luz
+    new Chart(document.getElementById('luz-chart'), {
+        type: 'line',
+        data: {
+            labels: timestamps,
+            datasets: [{
+                label: 'Luz',
+                data: luz,
                 borderColor: 'red',
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderWidth: 1
