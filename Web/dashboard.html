@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Sensores LoRa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard de Sensores LoRa</h1>
+        <div class="dashboard">
+            <div class="card">
+                <h2>Temperatura</h2>
+                <p id="temp-value" class="value"></p>
+                <canvas id="temp-chart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Luz</h2>
+                <p id="light-value" class="value"></p>
+                <canvas id="light-chart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Humedad del Ambiente</h2>
+                <p id="hum-air-value" class="value"></p>
+                <canvas id="hum-air-chart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Humedad del Suelo</h2>
+                <p id="hum-soil-value" class="value"></p>
+                <canvas id="hum-soil-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

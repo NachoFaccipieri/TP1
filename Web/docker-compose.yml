@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  mongo-server:
+    image: mongo:latest
+    container_name: mongo-server-tp1
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb_data_tp1:/data/db
+    networks:
+      - mongo-network-tp1 
+  mongo-client:
+    image: mongo-express:latest
+    container_name: mongo-client-tp1
+    restart: always
+    depends_on:
+      - mongo-server
+    environment:
+        - ME_CONFIG_MONGODB_SERVER=mongo-server-tp1
+        - ME_CONFIG_MONGODB_PORT=27017
+    ports:
+        - "8082:8081"
+    networks:
+      - mongo-network-tp1
+volumes:
+  mongodb_data_tp1:
+networks:
+  mongo-network-tp1:
