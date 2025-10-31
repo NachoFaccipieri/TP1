@@ -1,4 +1,4 @@
-26643416389128886
+26634610375616589
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -62642,27 +62642,6 @@ heatsink
 0
 0
 0
-HuellasPersonales
-P1Ciaa
-
-CONN Poncho
-0
-40
-40
-HuellasPersonales
-P2Ciaa
-
-CONN Poncho
-0
-40
-40
-HuellasPersonales
-WIO-SX1262
-
-
-0
-14
-14
 Inductor_SMD
 L_6.3x6.3_H3
 Choke, SMD, 6.3x6.3mm 3mm height
@@ -70573,13 +70552,6 @@ Yellow 5381 Series LED
 0
 2
 2
-Library
-Untitled
-
-
-0
-14
-14
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -99228,13 +99200,6 @@ Symbol
 WEEE-Logo_28.1x40mm_SilkScreen
 Waste Electrical and Electronic Equipment Directive https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32012L0019#page=29
 Logo WEEE
-0
-0
-0
-Tdp1_TiraEDUCIA1
-Untitled
-
-
 0
 0
 0
