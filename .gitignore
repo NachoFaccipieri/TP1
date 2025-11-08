@@ -1,0 +1,13 @@
+# Entornos virtuales de Python
+tp1/
+venv/
+env/
+
+# Archivos comprimidos (el culpable) [cite: 1]
+*.tar.xz
+*.zip
+*.rar
+
+# Archivos de IDE (recomendado)
+.vscode/
+.idea/
