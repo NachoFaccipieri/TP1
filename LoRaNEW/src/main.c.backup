@@ -1,0 +1,158 @@
+#include "sapi.h"
+#include "sx126x.h"
+
+// Configuración de pines SX1262
+#define SX126X_NSS    GPIO0
+#define SX126X_BUSY   GPIO1  
+#define SX126X_RESET  GPIO2
+#define SX126X_DIO1   GPIO3
+
+static const void* radio_context = NULL;
+static uint8_t buffer[255];
+
+void SX126xReset(void) {
+    gpioWrite(SX126X_RESET, LOW);
+    delay(20);
+    gpioWrite(SX126X_RESET, HIGH);
+    delay(50);
+}
+
+void SX126xWaitOnBusy(void) {
+    while(gpioRead(SX126X_BUSY) == HIGH) {
+        delay(1);
+    }
+}
+
+sx126x_status_t sx126x_hal_write(const void* context, const uint8_t* command, 
+                                  const uint16_t command_length,
+                                  const uint8_t* data, const uint16_t data_length) {
+    gpioWrite(SX126X_NSS, LOW);
+    
+    if(command_length > 0) {
+        spiWrite(SPI0, (uint8_t*)command, command_length);
+    }
+    
+    if(data_length > 0) {
+        spiWrite(SPI0, (uint8_t*)data, data_length);
+    }
+    
+    gpioWrite(SX126X_NSS, HIGH);
+    SX126xWaitOnBusy();
+    
+    return SX126X_STATUS_OK;
+}
+
+sx126x_status_t sx126x_hal_read(const void* context, const uint8_t* command,
+                                 const uint16_t command_length,
+                                 uint8_t* data, const uint16_t data_length) {
+    gpioWrite(SX126X_NSS, LOW);
+    
+    if(command_length > 0) {
+        spiWrite(SPI0, (uint8_t*)command, command_length);
+    }
+    
+    if(data_length > 0) {
+        spiRead(SPI0, data, data_length);
+    }
+    
+    gpioWrite(SX126X_NSS, HIGH);
+    SX126xWaitOnBusy();
+    
+    return SX126X_STATUS_OK;
+}
+
+sx126x_status_t sx126x_hal_reset(const void* context) {
+    SX126xReset();
+    return SX126X_STATUS_OK;
+}
+
+sx126x_status_t sx126x_hal_wakeup(const void* context) {
+    gpioWrite(SX126X_NSS, LOW);
+    delay(1);
+    gpioWrite(SX126X_NSS, HIGH);
+    return SX126X_STATUS_OK;
+}
+
+int main(void) {
+    boardInit();
+    uartConfig(UART_USB, 115200);
+    
+    // Configurar pines SX1262
+    gpioInit(SX126X_NSS, GPIO_OUTPUT);
+    gpioInit(SX126X_BUSY, GPIO_INPUT);
+    gpioInit(SX126X_RESET, GPIO_OUTPUT);
+    gpioInit(SX126X_DIO1, GPIO_INPUT);
+    
+    gpioWrite(SX126X_NSS, HIGH);
+    
+    // Configurar SPI
+    spiInit(SPI0);
+    
+    printf("LoRa SX1262 Test - Iniciando...\r\n");
+    
+    // Reset del SX1262
+    SX126xReset();
+    delay(100);
+    
+    // Configuración básica LoRa
+    sx126x_set_standby(radio_context, SX126X_STANDBY_CFG_RC);
+    sx126x_set_pkt_type(radio_context, SX126X_PKT_TYPE_LORA);
+    
+    // Configurar para 915 MHz
+    sx126x_set_rf_freq(radio_context, 915000000);
+    
+    // Configurar PA para TX
+    sx126x_pa_cfg_params_t pa_cfg = {
+        .pa_duty_cycle = 0x04,
+        .hp_max = 0x07,
+        .device_sel = 0x00,
+        .pa_lut = 0x01
+    };
+    sx126x_set_pa_cfg(radio_context, &pa_cfg);
+    sx126x_set_tx_params(radio_context, 22, SX126X_RAMP_40_US);
+    
+    // Configurar modulación LoRa
+    sx126x_mod_params_lora_t mod_params = {
+        .sf = SX126X_LORA_SF7,
+        .bw = SX126X_LORA_BW_125,
+        .cr = SX126X_LORA_CR_4_5,
+        .ldro = 0
+    };
+    sx126x_set_lora_mod_params(radio_context, &mod_params);
+    
+    // Configurar paquete
+    sx126x_pkt_params_lora_t pkt_params = {
+        .preamble_len_in_symb = 8,
+        .header_type = SX126X_LORA_PKT_EXPLICIT,
+        .pld_len_in_bytes = 13,
+        .crc_is_on = true,
+        .invert_iq_is_on = false
+    };
+    sx126x_set_lora_pkt_params(radio_context, &pkt_params);
+    
+    printf("SX1262 configurado. Enviando paquetes cada 10 segundos...\r\n");
+    
+    uint32_t counter = 0;
+    
+    while(1) {
+        // Preparar mensaje
+        sprintf((char*)buffer, "Hola RAK %lu", counter++);
+        
+        // Enviar
+        sx126x_write_buffer(radio_context, 0, buffer, 13);
+        sx126x_set_tx(radio_context, 0);
+        
+        printf("Paquete enviado: %s\r\n", buffer);
+        
+        // Esperar TX done (simplificado)
+        delay(1000);
+        
+        // Volver a standby
+        sx126x_set_standby(radio_context, SX126X_STANDBY_CFG_RC);
+        
+        delay(10000);
+    }
+    
+    return 0;
+}
+

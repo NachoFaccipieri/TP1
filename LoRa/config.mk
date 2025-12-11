@@ -1,18 +1,18 @@
-# Configuración de compilación para LoRaWAN
-
+# Compile options
 VERBOSE=n
 OPT=g
 USE_NANO=n
 SEMIHOST=n
 USE_FPU=y
 
+# Libraries
 USE_LPCOPEN=y
 USE_SAPI=y
 
 PROJECT_INCLUDES = inc
 
 PROJECT_SRCS = \
-	main.c \
+	src/main.c \
 	src/sx126x.c \
 	src/sx126x-hal.c \
 	src/radio_adapter.c \
@@ -27,6 +27,8 @@ PROJECT_SRCS = \
 	inc/region/Region.c \
 	inc/region/RegionCommon.c \
 	inc/region/RegionAU915.c \
+	inc/region/RegionBaseUS.c \
+	inc/region/RegionUS915.c \
 	inc/timer.c \
 	inc/systime.c \
 	inc/delay.c
