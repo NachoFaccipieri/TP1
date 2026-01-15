@@ -1,0 +1,10 @@
+Configurar RAK
+=> 192.168.230.1
+=> Wi-Fi => cambiar a "cliente", darle a "scan", elegir el wifi y poner la contraseña
+=> Con el programa advanced ip scanner, buscar qué IP se le asignó y entrar ahí
+=> Ir al packet logger
+
+Desde arduino IDE
+=> Tools -> Board -> Heltec ESP -> WiFi LoRa 32 (V2) ¡¡Importante el "V2"!!
+=> Tools -> Port -> Seleccionar el puerto correspondiente
+correr el programa con la flechita "->"

@@ -1,0 +1,11 @@
+En el arduino IDE:
+1. File -> Preferences -> "Additional boards manager ULRs:" agregar:
+https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/releases/download/0.0.7/package_heltec_esp32_index.json
+
+2. Tools -> Boards -> Boards Manager -> Buscar "Heltec ESP32", instalar
+
+
+
+Librerías que se usaron para programar:
+Heltec (receptor): Librería LoRa (SX1278)
+EDU-CIAA + Wio (transmisor): RadioLib con SX1262
