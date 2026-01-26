@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/plc/ide4plc/src/PLC_IL_Instructions.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/plc/ide4plc/src/PLC_IL_Instructions.o: \
  libs/plc/ide4plc/src/PLC_IL_Instructions.c \
  libs/plc/ide4plc/inc/PLC_IL_Instructions.h \
  libs/plc/ide4plc/inc/PLC_Registers.h \

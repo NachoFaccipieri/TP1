@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/cdc_uart.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/cdc_uart.o: \
  libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/cdc_uart.c \
  libs/lpc_open/boards/edu_ciaa_nxp/inc/board.h \
  libs/lpc_open/lpc_chip_43xx/inc/chip.h \

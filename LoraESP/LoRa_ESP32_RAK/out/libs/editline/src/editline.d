@@ -1,2 +1,2 @@
-LoRa/LoraESP/test_lora32/out/libs/editline//src/editline.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/editline//src/editline.o: \
  libs/editline//src/editline.c libs/editline//inc/editline.h

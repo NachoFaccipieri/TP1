@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_stdio.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_stdio.o: \
  libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_stdio.c \
  libs/sapi/sapi_v0.6.2/abstract_modules/inc/sapi_stdio.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi.h \

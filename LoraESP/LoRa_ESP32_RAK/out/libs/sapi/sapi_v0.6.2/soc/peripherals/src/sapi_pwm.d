@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_pwm.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_pwm.o: \
  libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_pwm.c \
  libs/sapi/sapi_v0.6.2/soc/peripherals/inc/sapi_pwm.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \

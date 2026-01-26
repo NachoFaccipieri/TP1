@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/external_peripherals/display/drivers/LCD/HD44780/GPIOs/display_lcd_hd44780_gpios.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/display/drivers/LCD/HD44780/GPIOs/display_lcd_hd44780_gpios.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/display/drivers/LCD/HD44780/GPIOs/display_lcd_hd44780_gpios.c \
  libs/sapi/sapi_v0.6.2/external_peripherals/display/drivers/LCD/HD44780/GPIOs/display_lcd_hd44780_gpios.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi.h \

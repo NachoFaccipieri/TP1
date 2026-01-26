@@ -1,6 +1,6 @@
-LoRa/LoraESP/test_lora32/out/LoRa/LoraESP/test_lora32/src/leer_adc.o: \
- LoRa/LoraESP/test_lora32/src/leer_adc.c \
- LoRa/LoraESP/test_lora32/inc/leer_adc.h \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o: \
+ LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.c \
+ LoRa/LoraESP/LoRa_ESP32_RAK/inc/leer_adc.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \
  libs/lpc_open/lpc_chip_43xx/inc/chip.h \

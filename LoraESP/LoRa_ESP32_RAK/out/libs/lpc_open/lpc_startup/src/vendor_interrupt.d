@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o: \
  libs/lpc_open/lpc_startup/src/vendor_interrupt.c \
  libs/lpc_open/boards/edu_ciaa_nxp/inc/board.h \
  libs/lpc_open/lpc_chip_43xx/inc/chip.h \

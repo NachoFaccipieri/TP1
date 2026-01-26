@@ -1,5 +1,5 @@
-// Función para obtener los datos de la API del backend
-
+// Variables globales para los charts
+let tempChart, luzChart, humAirChart, humSoilChart;
 
 async function fetchData() {
     try {
@@ -18,22 +18,28 @@ async function updateCharts() {
     const data = await fetchData();
     if (data.length === 0) return;
 
-    // Extraer datos para los gráficos
-    const timestamps = data.map(d => new Date(d.timestamp * 1000).toLocaleTimeString());
-    const temperatures = data.map(d => d.temperature.toFixed(2));
-    const luz = data.map(d => d.luz.toFixed(2));
-    const humAir = data.map(d => d.humidity_air.toFixed(2));
-    const humSoil = data.map(d => d.humidity_soil.toFixed(2));
+    // Extraer datos para los gráficos (nombres corregidos)
+    const timestamps = data.map(d => new Date(d.timestamp).toLocaleTimeString()).reverse();
+    const temperatures = data.map(d => d.temp).reverse();
+    const luz = data.map(d => d.luz).reverse();
+    const humAir = data.map(d => d.hum_air).reverse();
+    const humSoil = data.map(d => d.hum_soil).reverse();
 
-    // Mostrar el último valor en vivo
-    const latestData = data[data.length - 1];
-    document.getElementById('temp-value').innerText = `${latestData.temperature.toFixed(1)} °C`;
-    document.getElementById('light-value').innerText = `${latestData.luz.toFixed(1)} luz`;
-    document.getElementById('hum-air-value').innerText = `${latestData.humidity_air.toFixed(1)} %`;
-    document.getElementById('hum-soil-value').innerText = `${latestData.humidity_soil.toFixed(1)} %`;
+    // Mostrar el último valor en vivo (índice 0 es el más reciente)
+    const latestData = data[0];
+    document.getElementById('temp-value').innerText = `${latestData.temp.toFixed(1)} °C`;
+    document.getElementById('light-value').innerText = `${latestData.luz} %`;
+    document.getElementById('hum-air-value').innerText = `${latestData.hum_air} %`;
+    document.getElementById('hum-soil-value').innerText = `${latestData.hum_soil} %`;
+
+    // Destruir charts existentes antes de crear nuevos
+    if (tempChart) tempChart.destroy();
+    if (luzChart) luzChart.destroy();
+    if (humAirChart) humAirChart.destroy();
+    if (humSoilChart) humSoilChart.destroy();
 
     // Gráfico de Temperatura
-    new Chart(document.getElementById('temp-chart'), {
+    tempChart = new Chart(document.getElementById('temp-chart'), {
         type: 'line',
         data: {
             labels: timestamps,
@@ -48,22 +54,22 @@ async function updateCharts() {
     });
 
     // Gráfico de la luz
-    new Chart(document.getElementById('luz-chart'), {
+    luzChart = new Chart(document.getElementById('light-chart'), {
         type: 'line',
         data: {
             labels: timestamps,
             datasets: [{
-                label: 'Luz',
+                label: 'Luz (%)',
                 data: luz,
-                borderColor: 'red',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'orange',
+                backgroundColor: 'rgba(255, 206, 86, 0.2)',
                 borderWidth: 1
             }]
         }
     });
 
     // Gráfico de Humedad del Ambiente
-    new Chart(document.getElementById('hum-air-chart'), {
+    humAirChart = new Chart(document.getElementById('hum-air-chart'), {
         type: 'line',
         data: {
             labels: timestamps,
@@ -78,7 +84,7 @@ async function updateCharts() {
     });
 
     // Gráfico de Humedad del Suelo
-    new Chart(document.getElementById('hum-soil-chart'), {
+    humSoilChart = new Chart(document.getElementById('hum-soil-chart'), {
         type: 'line',
         data: {
             labels: timestamps,
@@ -115,4 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Llamar a la función al cargar la página
 window.onload = updateCharts;
+
+// Actualizar cada 5 segundos
+setInterval(updateCharts, 5000);
 

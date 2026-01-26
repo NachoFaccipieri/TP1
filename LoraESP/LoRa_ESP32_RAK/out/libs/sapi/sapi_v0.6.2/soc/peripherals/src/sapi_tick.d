@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o: \
  libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.c \
  libs/sapi/sapi_v0.6.2/soc/peripherals/inc/sapi_tick.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \

@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/plc/ide4plc/src/PLC_Lib.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/plc/ide4plc/src/PLC_Lib.o: \
  libs/plc/ide4plc/src/PLC_Lib.c libs/plc/ide4plc/inc/PLC_Lib.h \
  libs/plc/ide4plc/inc/PLC_Services.h \
  libs/plc/ide4plc/inc/PLC_StandardCDataTypes.h \

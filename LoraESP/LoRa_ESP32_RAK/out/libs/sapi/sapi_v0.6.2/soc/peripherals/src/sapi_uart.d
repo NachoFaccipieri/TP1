@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o: \
  libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.c \
  libs/sapi/sapi_v0.6.2/soc/peripherals/inc/sapi_uart.h \
  libs/sapi/sapi_v0.6.2/abstract_modules/inc/sapi_delay.h \

@@ -1,2 +1,2 @@
-LoRa/LoraESP/test_lora32/out/libs/sys_newlib//src/system.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o: \
  libs/sys_newlib//src/system.c

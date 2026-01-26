@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.o: \
  libs/lpc_open/lpc_chip_43xx/src/ritimer_18xx_43xx.c \
  libs/lpc_open/lpc_chip_43xx/inc/chip.h \
  libs/lpc_open/lpc_chip_43xx/inc/sys_config.h \

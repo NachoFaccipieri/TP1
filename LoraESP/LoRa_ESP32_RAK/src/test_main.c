@@ -1,5 +1,5 @@
 /*
- * EDU-CIAA -> Heltec (por UART)
+ * EDU-CIAA -> Heltec (por UART software GPIO1 con timer preciso)
  * 
  * Lee sensores y envía datos al Heltec por UART software en GPIO1
  */
@@ -9,13 +9,17 @@
 
 #define TX_PIN  GPIO1  // Pin 32 - TX hacia Heltec
 
-// Enviar un byte por UART software a 9600 baud
+// Delay preciso usando delay() para 300 baud
+void preciseBitDelay(void) {
+    // 300 baud = 3.33 ms por bit (ultra lento pero estable)
+    delay(4);  // 3 milisegundos, muy estable
+}
+
+// Enviar un byte por UART software
 void softUART_writeByte(uint8_t data) {
-    uint32_t bitDelay = 104; // microsegundos por bit a 9600 baud
-    
     // START bit (LOW)
     gpioWrite(TX_PIN, LOW);
-    delayInaccurateUs(bitDelay);
+    preciseBitDelay();
     
     // 8 bits de datos (LSB primero)
     for(int i = 0; i < 8; i++) {
@@ -24,12 +28,12 @@ void softUART_writeByte(uint8_t data) {
         } else {
             gpioWrite(TX_PIN, LOW);
         }
-        delayInaccurateUs(bitDelay);
+        preciseBitDelay();
     }
     
     // STOP bit (HIGH)
     gpioWrite(TX_PIN, HIGH);
-    delayInaccurateUs(bitDelay);
+    preciseBitDelay();
 }
 
 void softUART_writeString(const char* str) {
@@ -45,19 +49,24 @@ int main(void) {
     // UART_USB para debug
     uartConfig(UART_USB, 115200);
     
+    adcConfig(ADC_ENABLE);
+      
     // Configurar GPIO1 como salida (TX)
     gpioInit(TX_PIN, GPIO_OUTPUT);
     gpioWrite(TX_PIN, HIGH); // Idle state
     
-    printf("\n=== EDU-CIAA -> HELTEC (GPIO1 software UART) ===\r\n");
+    printf("\n=== EDU-CIAA -> HELTEC (GPIO1 software UART optimizado) ===\r\n");
     printf("Enviando datos cada 5 segundos...\r\n\n");
     
     int contador = 0;
     
     while(1) {
-        // Leer sensor de luz
-        uint16_t luz_raw = leerADC(CH1);
-        int luz_percent = (luz_raw * 100) / 1023;
+        // Leer sensor de luz (canal 3 según código viejo)
+        uint16_t luz_raw = adcRead(CH3);  // Cambiado a CH3
+        uint8_t luz_percent = leerADC(CH3);  // Cambiado a CH3
+        
+        // Debug en USB - mostrar valor RAW
+        printf("ADC RAW: %d (de 1023)\r\n", luz_raw);
         
         // Crear mensaje
         char mensaje[100];
@@ -71,7 +80,7 @@ int main(void) {
         printf("[TX %d] %s", contador, mensaje);
         
         contador++;
-        delay(5000);
+        delay(30000);  // 30 segundos en vez de 5
     }
     
     return 0;

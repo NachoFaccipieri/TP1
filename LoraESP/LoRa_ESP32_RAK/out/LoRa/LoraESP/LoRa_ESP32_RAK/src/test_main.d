@@ -1,5 +1,5 @@
-LoRa/LoraESP/test_lora32/out/LoRa/LoraESP/test_lora32/src/test_main.o: \
- LoRa/LoraESP/test_lora32/src/test_main.c \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o: \
+ LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.c \
  libs/sapi/sapi_v0.6.2/base/inc/sapi.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \
  libs/lpc_open/lpc_chip_43xx/inc/chip.h \
@@ -128,4 +128,4 @@ LoRa/LoraESP/test_lora32/out/LoRa/LoraESP/test_lora32/src/test_main.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/pressure_temperature/bmp280/inc/bmp280.h \
  libs/sapi/sapi_v0.6.2/external_peripherals/pressure_temperature/bmp280/inc/bmp280_defs.h \
  libs/sapi/sapi_v0.6.2/external_peripherals/mcp23017/inc/mcp23017.h \
- LoRa/LoraESP/test_lora32/inc/leer_adc.h
+ LoRa/LoraESP/LoRa_ESP32_RAK/inc/leer_adc.h

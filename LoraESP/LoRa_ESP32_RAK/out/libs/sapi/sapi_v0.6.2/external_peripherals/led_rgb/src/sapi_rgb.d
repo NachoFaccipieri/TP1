@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/external_peripherals/led_rgb/src/sapi_rgb.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/led_rgb/src/sapi_rgb.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/led_rgb/src/sapi_rgb.c \
  libs/sapi/sapi_v0.6.2/external_peripherals/led_rgb/inc/sapi_rgb.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi.h \

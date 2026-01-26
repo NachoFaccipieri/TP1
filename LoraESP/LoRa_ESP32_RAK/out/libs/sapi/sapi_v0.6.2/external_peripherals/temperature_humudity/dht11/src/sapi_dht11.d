@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.c \
  libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/inc/sapi_dht11.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \

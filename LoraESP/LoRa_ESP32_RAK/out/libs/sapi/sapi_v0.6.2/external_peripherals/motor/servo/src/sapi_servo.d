@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/external_peripherals/motor/servo/src/sapi_servo.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/motor/servo/src/sapi_servo.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/motor/servo/src/sapi_servo.c \
  libs/sapi/sapi_v0.6.2/soc/peripherals/inc/sapi_gpio.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \

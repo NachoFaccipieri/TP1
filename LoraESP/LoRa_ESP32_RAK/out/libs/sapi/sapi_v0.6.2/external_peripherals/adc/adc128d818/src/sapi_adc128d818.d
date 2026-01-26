@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/external_peripherals/adc/adc128d818/src/sapi_adc128d818.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/adc/adc128d818/src/sapi_adc128d818.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/adc/adc128d818/src/sapi_adc128d818.c \
  libs/sapi/sapi_v0.6.2/external_peripherals/adc/adc128d818/inc/sapi_adc128d818.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \

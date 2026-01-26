@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/base/src/sapi_datatypes.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/base/src/sapi_datatypes.o: \
  libs/sapi/sapi_v0.6.2/base/src/sapi_datatypes.c \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \
  libs/lpc_open/lpc_chip_43xx/inc/chip.h \

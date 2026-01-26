@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/external_peripherals/mcp23017/src/mcp23017.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/mcp23017/src/mcp23017.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/mcp23017/src/mcp23017.c \
  libs/sapi/sapi_v0.6.2/external_peripherals/mcp23017/inc/mcp23017.h \
  libs/sapi/sapi_v0.6.2/soc/peripherals/inc/sapi_i2c.h \

@@ -1,4 +1,4 @@
-LoRa/LoraESP/test_lora32/out/libs/sapi/sapi_v0.6.2/external_peripherals/magnetometer/hmc5883l/src/sapi_magnetometer_hmc5883l.o: \
+LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/magnetometer/hmc5883l/src/sapi_magnetometer_hmc5883l.o: \
  libs/sapi/sapi_v0.6.2/external_peripherals/magnetometer/hmc5883l/src/sapi_magnetometer_hmc5883l.c \
  libs/sapi/sapi_v0.6.2/external_peripherals/magnetometer/hmc5883l/inc/sapi_magnetometer_hmc5883l.h \
  libs/sapi/sapi_v0.6.2/base/inc/sapi_datatypes.h \
