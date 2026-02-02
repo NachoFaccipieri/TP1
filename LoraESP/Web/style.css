@@ -108,19 +108,32 @@ h1 {
 .dashboard {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
 }
 
 .card {
     background: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    cursor: pointer;
+    max-height: 280px; /* Limitar altura */
+}
 
-	cursor: pointer;
-	
+.card canvas {
+    max-height: 150px !important; /* Gráficos más chicos */
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.value {
+    font-size: 1.8em !important;
+    margin: 5px 0 !important;
 }
 
 .card:hover {

@@ -6,8 +6,10 @@
 
 #include "sapi.h"
 #include "leer_adc.h"
+#include "sapi_dht11.h"
 
 #define TX_PIN  GPIO1  // Pin 32 - TX hacia Heltec
+#define DHT11_PIN GPIO7 // Pin para el sensor DHT11
 
 // Delay preciso usando delay() para 300 baud
 void preciseBitDelay(void) {
@@ -50,37 +52,54 @@ int main(void) {
     uartConfig(UART_USB, 115200);
     
     adcConfig(ADC_ENABLE);
+    
+    // Inicializar sensor DHT11
+    dht11Init(DHT11_PIN);
       
     // Configurar GPIO1 como salida (TX)
     gpioInit(TX_PIN, GPIO_OUTPUT);
     gpioWrite(TX_PIN, HIGH); // Idle state
     
-    printf("\n=== EDU-CIAA -> HELTEC (GPIO1 software UART optimizado) ===\r\n");
-    printf("Enviando datos cada 5 segundos...\r\n\n");
+    printf("\n=== EDU-CIAA -> HELTEC (GPIO1 software UART) ===\r\n");
+    printf("Sensores: Luz(CH3), HumSuelo(CH2), DHT11(GPIO0)\r\n");
+    printf("Enviando datos cada 30 segundos...\r\n\n");
     
     int contador = 0;
     
     while(1) {
-        // Leer sensor de luz (canal 3 según código viejo)
-        uint16_t luz_raw = adcRead(CH3);  // Cambiado a CH3
-        uint8_t luz_percent = leerADC(CH3);  // Cambiado a CH3
+        // Leer sensores analógicos (UNA SOLA VEZ cada uno)
+        uint8_t luz_percent = leerADC(CH3);
+        delay(500);
+        uint8_t hum_suelo = leerADC(CH2);
         
-        // Debug en USB - mostrar valor RAW
-        printf("ADC RAW: %d (de 1023)\r\n", luz_raw);
+        // Variables para DHT11
+        float temperatura = 0;
+        float humedad_aire = 0;
         
-        // Crear mensaje
+        // Leer DHT11 (temperatura y humedad del aire)
+        bool dht_ok = dht11Read(&humedad_aire, &temperatura);
+        
+        // Convertir a enteros
+        int temp_int = (int)temperatura;
+        int hum_int = (int)humedad_aire;
+        
+        if (!dht_ok) {
+            printf("Error leyendo DHT11 en GPIO7\r\n");
+        }
+        
+        // Crear mensaje con todos los sensores
         char mensaje[100];
-        sprintf(mensaje, "temp:24.5,hum_air:58,luz:%d,hum_soil:42,count:%d\n", 
-                luz_percent, contador);
-        
-        // Enviar por GPIO1 (software UART) al Heltec
-        softUART_writeString(mensaje);
+        sprintf(mensaje, "temp:%d,hum_air:%d,luz:%d,hum_soil:%d,count:%d\n", 
+                temp_int, hum_int, luz_percent, hum_suelo, contador);
         
         // Debug en USB
         printf("[TX %d] %s", contador, mensaje);
         
+        // Enviar por GPIO1 (software UART) al Heltec
+        softUART_writeString(mensaje);
+        
         contador++;
-        delay(30000);  // 30 segundos en vez de 5
+        delay(5000);  // 7 segundos
     }
     
     return 0;

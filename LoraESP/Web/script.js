@@ -13,7 +13,7 @@ async function fetchData() {
 }
 
 
-// Función para actualizar los gráficos
+// Función para actualizar los gráficos SIN scroll
 async function updateCharts() {
     const data = await fetchData();
     if (data.length === 0) return;
@@ -32,71 +32,95 @@ async function updateCharts() {
     document.getElementById('hum-air-value').innerText = `${latestData.hum_air} %`;
     document.getElementById('hum-soil-value').innerText = `${latestData.hum_soil} %`;
 
-    // Destruir charts existentes antes de crear nuevos
-    if (tempChart) tempChart.destroy();
-    if (luzChart) luzChart.destroy();
-    if (humAirChart) humAirChart.destroy();
-    if (humSoilChart) humSoilChart.destroy();
+    // Si los charts ya existen, ACTUALIZAR datos (no recrear)
+    if (tempChart) {
+        tempChart.data.labels = timestamps;
+        tempChart.data.datasets[0].data = temperatures;
+        tempChart.update('none'); // Sin animación para evitar flicker
+    } else {
+        // Crear chart por primera vez
+        tempChart = new Chart(document.getElementById('temp-chart'), {
+            type: 'line',
+            data: {
+                labels: timestamps,
+                datasets: [{
+                    label: 'Temperatura (°C)',
+                    data: temperatures,
+                    borderColor: 'red',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: true }
+        });
+    }
 
-    // Gráfico de Temperatura
-    tempChart = new Chart(document.getElementById('temp-chart'), {
-        type: 'line',
-        data: {
-            labels: timestamps,
-            datasets: [{
-                label: 'Temperatura (°C)',
-                data: temperatures,
-                borderColor: 'red',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderWidth: 1
-            }]
-        }
-    });
+    if (luzChart) {
+        luzChart.data.labels = timestamps;
+        luzChart.data.datasets[0].data = luz;
+        luzChart.update('none');
+    } else {
+        luzChart = new Chart(document.getElementById('light-chart'), {
+            type: 'line',
+            data: {
+                labels: timestamps,
+                datasets: [{
+                    label: 'Luz (%)',
+                    data: luz,
+                    borderColor: 'orange',
+                    backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: true }
+        });
+    }
 
-    // Gráfico de la luz
-    luzChart = new Chart(document.getElementById('light-chart'), {
-        type: 'line',
-        data: {
-            labels: timestamps,
-            datasets: [{
-                label: 'Luz (%)',
-                data: luz,
-                borderColor: 'orange',
-                backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                borderWidth: 1
-            }]
-        }
-    });
+    if (humAirChart) {
+        humAirChart.data.labels = timestamps;
+        humAirChart.data.datasets[0].data = humAir;
+        humAirChart.update('none');
+    } else {
+        humAirChart = new Chart(document.getElementById('hum-air-chart'), {
+            type: 'line',
+            data: {
+                labels: timestamps,
+                datasets: [{
+                    label: 'Humedad del Ambiente (%)',
+                    data: humAir,
+                    borderColor: 'blue',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: true }
+        });
+    }
 
-    // Gráfico de Humedad del Ambiente
-    humAirChart = new Chart(document.getElementById('hum-air-chart'), {
-        type: 'line',
-        data: {
-            labels: timestamps,
-            datasets: [{
-                label: 'Humedad del Ambiente (%)',
-                data: humAir,
-                borderColor: 'blue',
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderWidth: 1
-            }]
-        }
-    });
-
-    // Gráfico de Humedad del Suelo
-    humSoilChart = new Chart(document.getElementById('hum-soil-chart'), {
-        type: 'line',
-        data: {
-            labels: timestamps,
-            datasets: [{
-                label: 'Humedad del Suelo (%)',
-                data: humSoil,
-                borderColor: 'green',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderWidth: 1
-            }]
-        }
-    });
+    if (humSoilChart) {
+        humSoilChart.data.labels = timestamps;
+        humSoilChart.data.datasets[0].data = humSoil;
+        humSoilChart.update('none');
+    } else {
+        humSoilChart = new Chart(document.getElementById('hum-soil-chart'), {
+            type: 'line',
+            data: {
+                labels: timestamps,
+                datasets: [{
+                    label: 'Humedad del Suelo (%)',
+                    data: humSoil,
+                    borderColor: 'green',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: true }
+        });
+    }
 }
 
 // Expande la card al hacer clic
