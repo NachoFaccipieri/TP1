@@ -2,6 +2,7 @@
  * EDU-CIAA -> Heltec (por UART software GPIO1 con timer preciso)
  * 
  * Lee sensores y envía datos al Heltec por UART software en GPIO1
+ * CON MODO BAJO CONSUMO usando RTC y __WFI()
  */
 
 #include "sapi.h"
@@ -10,6 +11,7 @@
 
 #define TX_PIN  GPIO1  // Pin 32 - TX hacia Heltec
 #define DHT11_PIN GPIO7 // Pin para el sensor DHT11
+#define TIEMPO_SLEEP 15 // Tiempo a dormir en SEGUNDOS (15 para demo en facultad, 300-600 para producción)
 
 // Delay preciso usando delay() para 300 baud
 void preciseBitDelay(void) {
@@ -45,6 +47,135 @@ void softUART_writeString(const char* str) {
     }
 }
 
+// ===== FUNCIONES DE BAJO CONSUMO =====
+
+// Sleep con WFI para bajo consumo
+void dormir_bajo_consumo(uint32_t segundos) {
+    printf("Durmiendo por %d segundos con WFI...", segundos);
+    
+    // Dividir en intervalos de 500ms para no saturar el loop
+    uint32_t intervalos = segundos * 2; // 2 intervalos por segundo
+    
+    for(uint32_t i = 0; i < intervalos; i++) {
+        delay(500); // 500ms
+        __asm__ volatile ("wfi"); // CPU duerme entre delays
+    }
+    
+    printf(" Despierto!\r\n");
+}
+
+// Estas funciones ya no se usan pero las dejo comentadas por si acaso
+/*
+// Sumar segundos al RTC de forma robusta
+void rtc_sumar_segundos(rtc_t *origen, int segundos, rtc_t *destino) {
+    *destino = *origen;
+    
+    destino->sec += segundos;
+    
+    // Ajustar Segundos -> Minutos
+    while(destino->sec >= 60) {
+        destino->sec -= 60;
+        destino->min++;
+    }
+    
+    // Ajustar Minutos -> Horas
+    while(destino->min >= 60) {
+        destino->min -= 60;
+        destino->hour++;
+    }
+    
+    // Ajustar Horas -> Días
+    while(destino->hour >= 24) {
+        destino->hour -= 24;
+        destino->mday++;
+    }
+    
+    // Ajustar Días -> Meses (simplificado: 31 días por mes)
+    while(destino->mday > 31) {
+        destino->mday -= 31;
+        destino->month++;
+        if(destino->mday == 0) destino->mday = 1;
+    }
+    
+    // Ajustar Meses -> Años
+    while(destino->month > 12) {
+        destino->month -= 12;
+        destino->year++;
+    }
+}
+
+// Dormir el sistema usando __WFI() hasta que el RTC alcance la alarma
+void dormir_sistema_hasta_alarma(uint32_t segundos) {
+    rtc_t actual, alarma;
+    
+    // Leer hora actual
+    if (!rtcRead(&actual)) {
+        printf("Error: RTC no responde, usando delay normal\r\n");
+        delay(segundos * 1000);
+        return;
+    }
+    
+    printf("RTC actual: %02d:%02d:%02d\r\n", actual.hour, actual.min, actual.sec);
+    
+    // Calcular hora de despertar
+    rtc_sumar_segundos(&actual, segundos, &alarma);
+    printf("Despertar en: %02d:%02d:%02d\r\n", alarma.hour, alarma.min, alarma.sec);
+    
+    // Contador de seguridad
+    uint32_t iteraciones = 0;
+    uint32_t max_iter = segundos * 1100; // Margen de seguridad
+    
+    // Bucle de Sleep con debug cada segundo
+    uint8_t ultimo_segundo = actual.sec;
+    
+    while(true) {
+        if (!rtcRead(&actual)) {
+            printf("RTC falló durante sleep\r\n");
+            break;
+        }
+        
+        // Debug cada segundo que pasa
+        if (actual.sec != ultimo_segundo) {
+            printf(".");
+            ultimo_segundo = actual.sec;
+        }
+        
+        iteraciones++;
+        if (iteraciones > max_iter) {
+            printf("\nTimeout alcanzado\r\n");
+            break;
+        }
+        
+        // Comprobar si llegamos al tiempo de alarma
+        bool tiempo_cumplido = false;
+        if (actual.year > alarma.year) tiempo_cumplido = true;
+        else if (actual.year == alarma.year) {
+            if (actual.month > alarma.month) tiempo_cumplido = true;
+            else if (actual.month == alarma.month) {
+                if (actual.mday > alarma.mday) tiempo_cumplido = true;
+                else if (actual.mday == alarma.mday) {
+                    if (actual.hour > alarma.hour) tiempo_cumplido = true;
+                    else if (actual.hour == alarma.hour) {
+                        if (actual.min > alarma.min) tiempo_cumplido = true;
+                        else if (actual.min == alarma.min) {
+                            if (actual.sec >= alarma.sec) tiempo_cumplido = true;
+                        }
+                    }
+                }
+            }
+        }
+        
+        if (tiempo_cumplido) {
+            printf("\nAlarma alcanzada!\r\n");
+            break;
+        }
+        
+        // Wait For Interrupt - Apaga CPU hasta próxima interrupción
+        __asm__ volatile ("wfi"); 
+    }
+}
+*/
+
 int main(void) {
     boardInit();
     
@@ -61,15 +192,14 @@ int main(void) {
     gpioWrite(TX_PIN, HIGH); // Idle state
     
     printf("\n=== EDU-CIAA -> HELTEC (GPIO1 software UART) ===\r\n");
-    printf("Sensores: Luz(CH3), HumSuelo(CH2), DHT11(GPIO0)\r\n");
-    printf("Enviando datos cada 30 segundos...\r\n\n");
+    printf("Sensores: Luz(CH3), HumSuelo(CH2), DHT11(GPIO7)\r\n");
+    printf("MODO BAJO CONSUMO: Sleep %d segundos con WFI\r\n\n", TIEMPO_SLEEP);
     
     int contador = 0;
     
     while(1) {
-        // Leer sensores analógicos (UNA SOLA VEZ cada uno)
+        // Leer sensores analógicos (sin delays, el sleep ya da tiempo suficiente)
         uint8_t luz_percent = leerADC(CH3);
-        delay(500);
         uint8_t hum_suelo = leerADC(CH2);
         
         // Variables para DHT11
@@ -99,7 +229,9 @@ int main(void) {
         softUART_writeString(mensaje);
         
         contador++;
-        delay(5000);  // 7 segundos
+        
+        // MODO BAJO CONSUMO: Sleep híbrido (delay + WFI)
+        dormir_bajo_consumo(TIEMPO_SLEEP);
     }
     
     return 0;

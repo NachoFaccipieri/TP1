@@ -18658,7 +18658,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x1a000000     0x3794
+.text           0x1a000000     0x37f4
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -18671,19 +18671,19 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a0037a0 LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a003800 LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x1a00011c        0x4 LONG 0xac SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a0037a0 LOADADDR (.data_RAM2)
+                0x1a000120        0x4 LONG 0x1a003800 LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a0037a0 LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a003800 LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a0037a0 LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a003800 LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a0037a0 LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a003800 LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
@@ -18784,527 +18784,532 @@ END GROUP
                 0x1a000354       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
                 0x1a000354                softUART_writeString
  *fill*         0x1a000366        0x2 ff
- .text.main     0x1a000368       0xd8 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
-                0x1a000368                main
- .text.leerADC  0x1a000440       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
-                0x1a000440                leerADC
+ .text.dormir_bajo_consumo
+                0x1a000368       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+                0x1a000368                dormir_bajo_consumo
+ .text.main     0x1a00039c       0xcc LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+                0x1a00039c                main
+ .text.leerADC  0x1a000468       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+                0x1a000468                leerADC
  .text.initialise_monitor_handles
-                0x1a000480        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
-                0x1a000480                initialise_monitor_handles
- *fill*         0x1a000482        0x2 ff
+                0x1a0004a8        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+                0x1a0004a8                initialise_monitor_handles
+ *fill*         0x1a0004aa        0x2 ff
  .text.Reset_Handler
-                0x1a000484       0x88 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
-                0x1a000484                Reset_Handler
- .text._fini    0x1a00050c        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
-                0x1a00050c                _fini
- .text._init    0x1a00050e        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
-                0x1a00050e                _init
+                0x1a0004ac       0x88 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+                0x1a0004ac                Reset_Handler
+ .text._fini    0x1a000534        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+                0x1a000534                _fini
+ .text._init    0x1a000536        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+                0x1a000536                _init
  .text._close_r
-                0x1a000510        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a000510                _close_r
+                0x1a000538        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a000538                _close_r
  .text._fstat_r
-                0x1a00051a        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a00051a                _fstat_r
+                0x1a000542        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a000542                _fstat_r
  .text._isatty_r
-                0x1a000524       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a000524                _isatty_r
+                0x1a00054c       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a00054c                _isatty_r
  .text._lseek_r
-                0x1a000536        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a000536                _lseek_r
- .text._read_r  0x1a000540       0x4e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a000540                _read_r
+                0x1a00055e        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a00055e                _lseek_r
+ .text._read_r  0x1a000568       0x4e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a000568                _read_r
  .text._write_r
-                0x1a00058e       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a00058e                _write_r
- *fill*         0x1a0005b6        0x2 ff
- .text._sbrk_r  0x1a0005b8       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a0005b8                _sbrk_r
+                0x1a0005b6       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a0005b6                _write_r
+ *fill*         0x1a0005de        0x2 ff
+ .text._sbrk_r  0x1a0005e0       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a0005e0                _sbrk_r
  .text.Board_SetupMuxing
-                0x1a0005d8       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x1a0005d8                Board_SetupMuxing
+                0x1a000600       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x1a000600                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x1a000610       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x1a000610                Board_SetupClocking
+                0x1a000638       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x1a000638                Board_SetupClocking
  .text.Board_SystemInit
-                0x1a00067c        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x1a00067c                Board_SystemInit
+                0x1a0006a4        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x1a0006a4                Board_SystemInit
  .text.Board_LED_Init
-                0x1a000688       0x44 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a0006b0       0x44 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_TEC_Init
-                0x1a0006cc       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a0006f4       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_GPIO_Init
-                0x1a00070c       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000734       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_ADC_Init
-                0x1a00074c       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000774       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_SPI_Init
-                0x1a00077c       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a0007a4       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_I2C_Init
-                0x1a0007b4       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a0007dc       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_Debug_Init
-                0x1a0007d8       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a0007d8                Board_Debug_Init
+                0x1a000800       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000800                Board_Debug_Init
  .text.Board_UARTPutChar
-                0x1a0007fc       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a0007fc                Board_UARTPutChar
+                0x1a000824       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000824                Board_UARTPutChar
  .text.Board_UARTGetChar
-                0x1a000810       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a000810                Board_UARTGetChar
+                0x1a000838       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000838                Board_UARTGetChar
  .text.Board_Init
-                0x1a00082c       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a00082c                Board_Init
+                0x1a000854       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000854                Board_Init
  .text.__stdio_putchar
-                0x1a00085c        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a00085c                __stdio_putchar
+                0x1a000884        0xa LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000884                __stdio_putchar
  .text.__stdio_getchar
-                0x1a000866        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a000866                __stdio_getchar
+                0x1a00088e        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a00088e                __stdio_getchar
  .text.__stdio_init
-                0x1a00086e        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a00086e                __stdio_init
- *fill*         0x1a000876        0x2 ff
+                0x1a000896        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a000896                __stdio_init
+ *fill*         0x1a00089e        0x2 ff
  .text.Chip_SSP_GetClockIndex
-                0x1a000878       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0008a0       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_GetPeriphClockIndex
-                0x1a00088c       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0008b4       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_SetClockRate
-                0x1a0008a4       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x1a0008a4                Chip_SSP_SetClockRate
+                0x1a0008cc       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0008cc                Chip_SSP_SetClockRate
  .text.Chip_SSP_SetBitRate
-                0x1a0008b6       0x3e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x1a0008b6                Chip_SSP_SetBitRate
+                0x1a0008de       0x3e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0008de                Chip_SSP_SetBitRate
  .text.Chip_SSP_Init
-                0x1a0008f4       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x1a0008f4                Chip_SSP_Init
+                0x1a00091c       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a00091c                Chip_SSP_Init
  .text.Chip_I2C_EventHandler
-                0x1a00092c       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x1a00092c                Chip_I2C_EventHandler
+                0x1a000954       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1a000954                Chip_I2C_EventHandler
  .text.Chip_I2C_Init
-                0x1a00094c       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x1a00094c                Chip_I2C_Init
+                0x1a000974       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1a000974                Chip_I2C_Init
  .text.Chip_I2C_SetClockRate
-                0x1a000970       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x1a000970                Chip_I2C_SetClockRate
+                0x1a000998       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1a000998                Chip_I2C_SetClockRate
  .text.Chip_SetupCoreClock
-                0x1a0009a8      0x158 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
-                0x1a0009a8                Chip_SetupCoreClock
+                0x1a0009d0      0x158 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x1a0009d0                Chip_SetupCoreClock
  .text.Chip_GPIO_Init
-                0x1a000b00        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
-                0x1a000b00                Chip_GPIO_Init
- *fill*         0x1a000b02        0x2 ff
+                0x1a000b28        0x2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x1a000b28                Chip_GPIO_Init
+ *fill*         0x1a000b2a        0x2 ff
  .text.Chip_ADC_GetClockIndex
-                0x1a000b04       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000b2c       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .text.getClkDiv
-                0x1a000b18       0x32 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000b40       0x32 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .text.setStartMode
-                0x1a000b4a        0xe LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000b4a                setStartMode
+                0x1a000b72        0xe LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000b72                setStartMode
  .text.readAdcVal
-                0x1a000b58       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000b58                readAdcVal
+                0x1a000b80       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000b80                readAdcVal
  .text.Chip_ADC_Init
-                0x1a000b70       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000b70                Chip_ADC_Init
+                0x1a000b98       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000b98                Chip_ADC_Init
  .text.Chip_ADC_DeInit
-                0x1a000bb0       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000bb0                Chip_ADC_DeInit
+                0x1a000bd8       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000bd8                Chip_ADC_DeInit
  .text.Chip_ADC_ReadValue
-                0x1a000bc6        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000bc6                Chip_ADC_ReadValue
+                0x1a000bee        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000bee                Chip_ADC_ReadValue
  .text.Chip_ADC_ReadStatus
-                0x1a000bce       0x36 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000bce                Chip_ADC_ReadStatus
+                0x1a000bf6       0x36 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000bf6                Chip_ADC_ReadStatus
  .text.Chip_ADC_Int_SetChannelCmd
-                0x1a000c04       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000c04                Chip_ADC_Int_SetChannelCmd
+                0x1a000c2c       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000c2c                Chip_ADC_Int_SetChannelCmd
  .text.Chip_ADC_SetStartMode
-                0x1a000c26       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000c26                Chip_ADC_SetStartMode
+                0x1a000c4e       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000c4e                Chip_ADC_SetStartMode
  .text.Chip_ADC_SetSampleRate
-                0x1a000c46       0x32 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000c46                Chip_ADC_SetSampleRate
+                0x1a000c6e       0x32 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000c6e                Chip_ADC_SetSampleRate
  .text.Chip_ADC_SetResolution
-                0x1a000c78        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000c78                Chip_ADC_SetResolution
+                0x1a000ca0        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000ca0                Chip_ADC_SetResolution
  .text.Chip_ADC_EnableChannel
-                0x1a000c84       0x2a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000c84                Chip_ADC_EnableChannel
+                0x1a000cac       0x2a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000cac                Chip_ADC_EnableChannel
  .text.Chip_ADC_SetBurstCmd
-                0x1a000cae       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a000cae                Chip_ADC_SetBurstCmd
+                0x1a000cd6       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a000cd6                Chip_ADC_SetBurstCmd
  .text.SystemCoreClockUpdate
-                0x1a000cd0       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
-                0x1a000cd0                SystemCoreClockUpdate
+                0x1a000cf8       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x1a000cf8                SystemCoreClockUpdate
  .text.pll_calc_divs
-                0x1a000ce4       0xa0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000d0c       0xa0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.pll_get_frac
-                0x1a000d84      0x10c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000dac      0x10c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_FindBaseClock
-                0x1a000e90       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000eb8       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_EnableCrystal
-                0x1a000edc       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a000edc                Chip_Clock_EnableCrystal
+                0x1a000f04       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000f04                Chip_Clock_EnableCrystal
  .text.Chip_Clock_GetDividerSource
-                0x1a000f28       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a000f28                Chip_Clock_GetDividerSource
+                0x1a000f50       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000f50                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x1a000f44       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a000f44                Chip_Clock_GetDividerDivisor
+                0x1a000f6c       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000f6c                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x1a000f60       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a000f60                Chip_Clock_GetClockInputHz
+                0x1a000f88       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a000f88                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_CalcMainPLLValue
-                0x1a001018       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001018                Chip_Clock_CalcMainPLLValue
+                0x1a001040       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001040                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x1a001098       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001098                Chip_Clock_GetMainPLLHz
+                0x1a0010c0       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0010c0                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDivRate
-                0x1a001104       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- *fill*         0x1a001126        0x2 ff
+                0x1a00112c       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ *fill*         0x1a00114e        0x2 ff
  .text.Chip_Clock_SetBaseClock
-                0x1a001128       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001128                Chip_Clock_SetBaseClock
+                0x1a001150       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001150                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x1a001180       0x26 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001180                Chip_Clock_GetBaseClock
+                0x1a0011a8       0x26 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0011a8                Chip_Clock_GetBaseClock
  .text.Chip_Clock_GetBaseClocktHz
-                0x1a0011a6        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0011a6                Chip_Clock_GetBaseClocktHz
- *fill*         0x1a0011b2        0x2 ff
+                0x1a0011ce        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0011ce                Chip_Clock_GetBaseClocktHz
+ *fill*         0x1a0011da        0x2 ff
  .text.Chip_Clock_EnableOpts
-                0x1a0011b4       0x3c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0011b4                Chip_Clock_EnableOpts
+                0x1a0011dc       0x3c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0011dc                Chip_Clock_EnableOpts
  .text.Chip_Clock_Enable
-                0x1a0011f0       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0011f0                Chip_Clock_Enable
+                0x1a001218       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001218                Chip_Clock_Enable
  .text.Chip_Clock_Disable
-                0x1a001224       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001224                Chip_Clock_Disable
+                0x1a00124c       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a00124c                Chip_Clock_Disable
  .text.Chip_Clock_GetRate
-                0x1a001258       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001258                Chip_Clock_GetRate
+                0x1a001280       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001280                Chip_Clock_GetRate
  .text.Chip_UART_GetIndex
-                0x1a0012a4       0x2c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a0012cc       0x2c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .text.Chip_UART_Init
-                0x1a0012d0       0x54 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a0012d0                Chip_UART_Init
+                0x1a0012f8       0x54 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a0012f8                Chip_UART_Init
  .text.Chip_UART_SetBaud
-                0x1a001324       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a001324                Chip_UART_SetBaud
+                0x1a00134c       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a00134c                Chip_UART_SetBaud
  .text.Chip_UART_SetBaudFDR
-                0x1a001364       0xdc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a001364                Chip_UART_SetBaudFDR
+                0x1a00138c       0xdc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a00138c                Chip_UART_SetBaudFDR
  .text.SystemInit
-                0x1a001440       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
-                0x1a001440                SystemInit
+                0x1a001468       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+                0x1a001468                SystemInit
  .text.cyclesCounterInit
-                0x1a001478       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
-                0x1a001478                cyclesCounterInit
+                0x1a0014a0       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+                0x1a0014a0                cyclesCounterInit
  .text.gpioObtainPinInit
-                0x1a001494       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+                0x1a0014bc       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
  .text.gpioInit
-                0x1a0014c8      0x1ac LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
-                0x1a0014c8                gpioInit
+                0x1a0014f0      0x1ac LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+                0x1a0014f0                gpioInit
  .text.gpioWrite
-                0x1a001674       0x6a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
-                0x1a001674                gpioWrite
+                0x1a00169c       0x6a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+                0x1a00169c                gpioWrite
  .text.gpioRead
-                0x1a0016de       0x68 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
-                0x1a0016de                gpioRead
- *fill*         0x1a001746        0x2 ff
- .text.adcInit  0x1a001748       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
-                0x1a001748                adcInit
- .text.adcRead  0x1a001800       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
-                0x1a001800                adcRead
+                0x1a001706       0x68 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+                0x1a001706                gpioRead
+ *fill*         0x1a00176e        0x2 ff
+ .text.adcInit  0x1a001770       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+                0x1a001770                adcInit
+ .text.adcRead  0x1a001828       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+                0x1a001828                adcRead
  .text.tickRead
-                0x1a001858        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
-                0x1a001858                tickRead
+                0x1a001880        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+                0x1a001880                tickRead
  .text.tickPowerSet
-                0x1a001864       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
-                0x1a001864                tickPowerSet
+                0x1a00188c       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+                0x1a00188c                tickPowerSet
  .text.tickInit
-                0x1a00187c       0x7c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
-                0x1a00187c                tickInit
+                0x1a0018a4       0x7c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+                0x1a0018a4                tickInit
  .text.SysTick_Handler
-                0x1a0018f8       0x2c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
-                0x1a0018f8                SysTick_Handler
+                0x1a001920       0x2c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+                0x1a001920                SysTick_Handler
  .text.uartInit
-                0x1a001924       0x7c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
-                0x1a001924                uartInit
+                0x1a00194c       0x7c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+                0x1a00194c                uartInit
  .text.USB0_IRQHandler
-                0x1a0019a0       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
-                0x1a0019a0                USB0_IRQHandler
+                0x1a0019c8       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x1a0019c8                USB0_IRQHandler
  .text.boardInit
-                0x1a0019bc       0x74 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
-                0x1a0019bc                boardInit
+                0x1a0019e4       0x74 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+                0x1a0019e4                boardInit
  .text.delayInaccurateMs
-                0x1a001a30       0x5a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
-                0x1a001a30                delayInaccurateMs
- *fill*         0x1a001a8a        0x2 ff
- .text.delay    0x1a001a8c       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
-                0x1a001a8c                delay
+                0x1a001a58       0x5a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+                0x1a001a58                delayInaccurateMs
+ *fill*         0x1a001ab2        0x2 ff
+ .text.delay    0x1a001ab4       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+                0x1a001ab4                delay
  .text.dht11_TimeOutReset
-                0x1a001ac4       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001aec       0x24 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
  .text.dht11_TimeOutCheck
-                0x1a001ae8       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001b10       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
  .text.dht11_ProcessData
-                0x1a001b08       0xa0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001b30       0xa0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
  .text.dht11_GPIO_High
-                0x1a001ba8       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001bd0       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
  .text.dht11_GPIO_Low
-                0x1a001bbc       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001be4       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
  .text.dht11_GPIO_Read
-                0x1a001bdc       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001c04       0x14 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
  .text.dht11_StartRead
-                0x1a001bf0       0xdc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001c18       0xdc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
  .text.dht11Init
-                0x1a001ccc       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
-                0x1a001ccc                dht11Init
+                0x1a001cf4       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001cf4                dht11Init
  .text.dht11Read
-                0x1a001cdc       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
-                0x1a001cdc                dht11Read
- .text          0x1a001d48       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
-                0x1a001d48                __aeabi_uldivmod
+                0x1a001d04       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x1a001d04                dht11Read
+ .text          0x1a001d70       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x1a001d70                __aeabi_uldivmod
  .text.__udivmoddi4
-                0x1a001d78      0x2d0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x1a001d78                __udivmoddi4
- .text          0x1a002048        0x4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
-                0x1a002048                __aeabi_idiv0
-                0x1a002048                __aeabi_ldiv0
+                0x1a001da0      0x2d0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x1a001da0                __udivmoddi4
+ .text          0x1a002070        0x4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x1a002070                __aeabi_idiv0
+                0x1a002070                __aeabi_ldiv0
  .text.__sflush_r
-                0x1a00204c      0x10c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fflush.o)
-                0x1a00204c                __sflush_r
+                0x1a002074      0x10c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fflush.o)
+                0x1a002074                __sflush_r
  .text._fflush_r
-                0x1a002158       0x78 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fflush.o)
-                0x1a002158                _fflush_r
- .text.std      0x1a0021d0       0x48 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a002180       0x78 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fflush.o)
+                0x1a002180                _fflush_r
+ .text.std      0x1a0021f8       0x48 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x1a002218        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a002218                _cleanup_r
+                0x1a002240        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a002240                _cleanup_r
  .text.__sfmoreglue
-                0x1a002224       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a002224                __sfmoreglue
+                0x1a00224c       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a00224c                __sfmoreglue
  .text.__sfp_lock_acquire
-                0x1a002250        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a002250                __sfp_lock_acquire
+                0x1a002278        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a002278                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x1a00225c        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a00225c                __sfp_lock_release
+                0x1a002284        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a002284                __sfp_lock_release
  .text.__sinit_lock_acquire
-                0x1a002268        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a002268                __sinit_lock_acquire
+                0x1a002290        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a002290                __sinit_lock_acquire
  .text.__sinit_lock_release
-                0x1a002274        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a002274                __sinit_lock_release
- .text.__sinit  0x1a002280       0x70 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a002280                __sinit
- .text.__sfp    0x1a0022f0       0x8c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a0022f0                __sfp
+                0x1a00229c        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a00229c                __sinit_lock_release
+ .text.__sinit  0x1a0022a8       0x70 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a0022a8                __sinit
+ .text.__sfp    0x1a002318       0x8c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a002318                __sfp
  .text._fwalk_reent
-                0x1a00237c       0x3c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fwalk.o)
-                0x1a00237c                _fwalk_reent
+                0x1a0023a4       0x3c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fwalk.o)
+                0x1a0023a4                _fwalk_reent
  .text.__libc_init_array
-                0x1a0023b8       0x48 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
-                0x1a0023b8                __libc_init_array
+                0x1a0023e0       0x48 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x1a0023e0                __libc_init_array
  .text.__retarget_lock_init_recursive
-                0x1a002400        0x2 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
-                0x1a002400                __retarget_lock_init_recursive
+                0x1a002428        0x2 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
+                0x1a002428                __retarget_lock_init_recursive
  .text.__retarget_lock_acquire_recursive
-                0x1a002402        0x2 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
-                0x1a002402                __retarget_lock_acquire_recursive
+                0x1a00242a        0x2 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
+                0x1a00242a                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x1a002404        0x2 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
-                0x1a002404                __retarget_lock_release_recursive
- .text.memcpy   0x1a002406       0x1c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                0x1a002406                memcpy
- .text.memset   0x1a002422       0x10 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
-                0x1a002422                memset
- *fill*         0x1a002432        0x2 ff
- .text._free_r  0x1a002434       0x9c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-freer.o)
-                0x1a002434                _free_r
+                0x1a00242c        0x2 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
+                0x1a00242c                __retarget_lock_release_recursive
+ .text.memcpy   0x1a00242e       0x1c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x1a00242e                memcpy
+ .text.memset   0x1a00244a       0x10 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x1a00244a                memset
+ *fill*         0x1a00245a        0x2 ff
+ .text._free_r  0x1a00245c       0x9c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-freer.o)
+                0x1a00245c                _free_r
  .text._malloc_r
-                0x1a0024d0       0xb4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x1a0024d0                _malloc_r
+                0x1a0024f8       0xb4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x1a0024f8                _malloc_r
  .text.__sfputc_r
-                0x1a002584       0x2e c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x1a0025ac       0x2e c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x1a0025b2       0x24 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
-                0x1a0025b2                __sfputs_r
- *fill*         0x1a0025d6        0x2 ff
+                0x1a0025da       0x24 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x1a0025da                __sfputs_r
+ *fill*         0x1a0025fe        0x2 ff
  .text._vfprintf_r
-                0x1a0025d8      0x250 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
-                0x1a0025d8                _vfprintf_r
-                0x1a0025d8                _vfiprintf_r
+                0x1a002600      0x250 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x1a002600                _vfprintf_r
+                0x1a002600                _vfiprintf_r
  .text._printf_common
-                0x1a002828       0xea c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x1a002828                _printf_common
- *fill*         0x1a002912        0x2 ff
+                0x1a002850       0xea c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x1a002850                _printf_common
+ *fill*         0x1a00293a        0x2 ff
  .text._printf_i
-                0x1a002914      0x228 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x1a002914                _printf_i
- .text.printf   0x1a002b3c       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-printf.o)
-                0x1a002b3c                iprintf
-                0x1a002b3c                printf
- .text._puts_r  0x1a002b6c       0xdc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-puts.o)
-                0x1a002b6c                _puts_r
- .text.puts     0x1a002c48       0x10 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-puts.o)
-                0x1a002c48                puts
- .text.sprintf  0x1a002c58       0x40 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-sprintf.o)
-                0x1a002c58                siprintf
-                0x1a002c58                sprintf
- .text.__sread  0x1a002c98       0x22 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
-                0x1a002c98                __sread
+                0x1a00293c      0x228 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x1a00293c                _printf_i
+ .text.printf   0x1a002b64       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-printf.o)
+                0x1a002b64                iprintf
+                0x1a002b64                printf
+ .text._puts_r  0x1a002b94       0xdc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-puts.o)
+                0x1a002b94                _puts_r
+ .text.puts     0x1a002c70       0x10 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-puts.o)
+                0x1a002c70                puts
+ .text.sprintf  0x1a002c80       0x40 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-sprintf.o)
+                0x1a002c80                siprintf
+                0x1a002c80                sprintf
+ .text.__sread  0x1a002cc0       0x22 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
+                0x1a002cc0                __sread
  .text.__swrite
-                0x1a002cba       0x38 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
-                0x1a002cba                __swrite
- .text.__sseek  0x1a002cf2       0x24 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
-                0x1a002cf2                __sseek
+                0x1a002ce2       0x38 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
+                0x1a002ce2                __swrite
+ .text.__sseek  0x1a002d1a       0x24 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
+                0x1a002d1a                __sseek
  .text.__sclose
-                0x1a002d16        0x8 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
-                0x1a002d16                __sclose
- *fill*         0x1a002d1e        0x2 ff
+                0x1a002d3e        0x8 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
+                0x1a002d3e                __sclose
+ *fill*         0x1a002d46        0x2 ff
  .text.__swbuf_r
-                0x1a002d20       0xa4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wbuf.o)
-                0x1a002d20                __swbuf_r
+                0x1a002d48       0xa4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wbuf.o)
+                0x1a002d48                __swbuf_r
  .text.__swsetup_r
-                0x1a002dc4       0xdc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wsetup.o)
-                0x1a002dc4                __swsetup_r
+                0x1a002dec       0xdc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wsetup.o)
+                0x1a002dec                __swsetup_r
  .text.__swhatbuf_r
-                0x1a002ea0       0x48 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-makebuf.o)
-                0x1a002ea0                __swhatbuf_r
+                0x1a002ec8       0x48 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-makebuf.o)
+                0x1a002ec8                __swhatbuf_r
  .text.__smakebuf_r
-                0x1a002ee8       0x80 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-makebuf.o)
-                0x1a002ee8                __smakebuf_r
- *fill*         0x1a002f68        0x8 ff
- .text          0x1a002f70       0xa0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memchr.o)
-                0x1a002f70                memchr
- .text.memmove  0x1a003010       0x34 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
-                0x1a003010                memmove
+                0x1a002f10       0x80 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-makebuf.o)
+                0x1a002f10                __smakebuf_r
+ .text          0x1a002f90       0xa0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memchr.o)
+                0x1a002f90                memchr
+ .text.memmove  0x1a003030       0x34 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+                0x1a003030                memmove
  .text.__malloc_lock
-                0x1a003044        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-mlock.o)
-                0x1a003044                __malloc_lock
+                0x1a003064        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-mlock.o)
+                0x1a003064                __malloc_lock
  .text.__malloc_unlock
-                0x1a003050        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-mlock.o)
-                0x1a003050                __malloc_unlock
+                0x1a003070        0xc c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-mlock.o)
+                0x1a003070                __malloc_unlock
  .text._realloc_r
-                0x1a00305c       0x4c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-reallocr.o)
-                0x1a00305c                _realloc_r
+                0x1a00307c       0x4c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-reallocr.o)
+                0x1a00307c                _realloc_r
  .text.__ssputs_r
-                0x1a0030a8       0xb6 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
-                0x1a0030a8                __ssputs_r
- *fill*         0x1a00315e        0x2 ff
+                0x1a0030c8       0xb6 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x1a0030c8                __ssputs_r
+ *fill*         0x1a00317e        0x2 ff
  .text._svfprintf_r
-                0x1a003160      0x1f0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
-                0x1a003160                _svfiprintf_r
-                0x1a003160                _svfprintf_r
+                0x1a003180      0x1f0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x1a003180                _svfiprintf_r
+                0x1a003180                _svfprintf_r
  .text._malloc_usable_size_r
-                0x1a003350       0x10 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-msizer.o)
-                0x1a003350                _malloc_usable_size_r
+                0x1a003370       0x10 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-msizer.o)
+                0x1a003370                _malloc_usable_size_r
  *(.rodata .rodata.* .constdata .constdata.*)
+ .rodata.dormir_bajo_consumo.str1.4
+                0x1a003380       0x35 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ *fill*         0x1a0033b5        0x3 ff
  .rodata.main.str1.4
-                0x1a003360       0xeb LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- *fill*         0x1a00344b        0x1 ff
+                0x1a0033b8       0xf3 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ *fill*         0x1a0034ab        0x1 ff
  .rodata.InitClkStates
-                0x1a00344c        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x1a0034ac        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .rodata.pinmuxing
-                0x1a003450       0x74 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x1a0034b0       0x74 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .rodata.ExtRateIn
-                0x1a0034c4        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a0034c4                ExtRateIn
+                0x1a003524        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a003524                ExtRateIn
  .rodata.GpioButtons
-                0x1a0034c8        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a003528        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .rodata.GpioLeds
-                0x1a0034d0        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a003530        0xc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .rodata.GpioPorts
-                0x1a0034dc       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- *fill*         0x1a0034ee        0x2 ff
+                0x1a00353c       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ *fill*         0x1a00354e        0x2 ff
  .rodata.OscRateIn
-                0x1a0034f0        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x1a0034f0                OscRateIn
+                0x1a003550        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x1a003550                OscRateIn
  .rodata.InitClkStates
-                0x1a0034f4       0x48 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .rodata        0x1a00353c        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a003554       0x48 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .rodata        0x1a00359c        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.Chip_Clock_SetDivider.str1.4
-                0x1a003540        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0035a0        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
                                   0x6 (size before relaxing)
  .rodata.periph_to_base
-                0x1a003548       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0035a8       0x6c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.UART_BClock
-                0x1a0035b4        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a003614        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .rodata.UART_PClock
-                0x1a0035bc        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a00361c        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .rodata.gpioPinsInit
-                0x1a0035c4       0xe6 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
-                0x1a0035c4                gpioPinsInit
- *fill*         0x1a0036aa        0x2 ff
- .rodata        0x1a0036ac        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+                0x1a003624       0xe6 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+                0x1a003624                gpioPinsInit
+ *fill*         0x1a00370a        0x2 ff
+ .rodata        0x1a00370c        0x8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
  .rodata.lpcUarts
-                0x1a0036b4       0x48 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+                0x1a003714       0x48 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
  .rodata.__sf_fake_stderr
-                0x1a0036fc       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a0036fc                __sf_fake_stderr
+                0x1a00375c       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a00375c                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x1a00371c       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a00371c                __sf_fake_stdin
+                0x1a00377c       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a00377c                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x1a00373c       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
-                0x1a00373c                __sf_fake_stdout
+                0x1a00379c       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+                0x1a00379c                __sf_fake_stdout
  .rodata._global_impure_ptr
-                0x1a00375c        0x4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
-                0x1a00375c                _global_impure_ptr
+                0x1a0037bc        0x4 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                0x1a0037bc                _global_impure_ptr
  .rodata._vfprintf_r.str1.1
-                0x1a003760       0x11 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x1a0037c0       0x11 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x1a003771       0x22 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x1a0037d1       0x22 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
  .rodata._svfprintf_r.str1.1
-                0x1a003793       0x11 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
-                0x1a0037a4                . = ALIGN (0x4)
- *fill*         0x1a003793        0x1 ff
+                0x1a0037f3       0x11 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x1a003804                . = ALIGN (0x4)
+ *fill*         0x1a0037f3        0x1 ff
 
-.glue_7         0x1a003794        0x0
- .glue_7        0x1a003794        0x0 linker stubs
+.glue_7         0x1a0037f4        0x0
+ .glue_7        0x1a0037f4        0x0 linker stubs
 
-.glue_7t        0x1a003794        0x0
- .glue_7t       0x1a003794        0x0 linker stubs
+.glue_7t        0x1a0037f4        0x0
+ .glue_7t       0x1a0037f4        0x0 linker stubs
 
-.vfp11_veneer   0x1a003794        0x0
- .vfp11_veneer  0x1a003794        0x0 linker stubs
+.vfp11_veneer   0x1a0037f4        0x0
+ .vfp11_veneer  0x1a0037f4        0x0 linker stubs
 
-.v4_bx          0x1a003794        0x0
- .v4_bx         0x1a003794        0x0 linker stubs
+.v4_bx          0x1a0037f4        0x0
+ .v4_bx         0x1a0037f4        0x0 linker stubs
 
-.iplt           0x1a003794        0x0
- .iplt          0x1a003794        0x0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
-                0x1a003794                . = ALIGN (0x4)
+.iplt           0x1a0037f4        0x0
+ .iplt          0x1a0037f4        0x0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+                0x1a0037f4                . = ALIGN (0x4)
 
-.preinit_array  0x1a003794        0x0
-                0x1a003794                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x1a0037f4        0x0
+                0x1a0037f4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x1a003794                PROVIDE (__preinit_array_end = .)
+                0x1a0037f4                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x1a003794        0x4
-                0x1a003794                PROVIDE (__init_array_start = .)
+.init_array     0x1a0037f4        0x4
+                0x1a0037f4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x1a003794        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
-                0x1a003798                PROVIDE (__init_array_end = .)
-                0x1a003798                . = ALIGN (0x4)
+ .init_array    0x1a0037f4        0x4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x1a0037f8                PROVIDE (__init_array_end = .)
+                0x1a0037f8                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a003798                __exidx_start = .
+                0x1a0037f8                __exidx_start = .
 
-.ARM.exidx      0x1a003798        0x8
+.ARM.exidx      0x1a0037f8        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
  .ARM.exidx.text.__udivmoddi4
-                0x1a003798        0x8 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x1a0037a0                __exidx_end = .
-                0x1a0037a0                _etext = .
+                0x1a0037f8        0x8 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x1a003800                __exidx_end = .
+                0x1a003800                _etext = .
 
-.rel.dyn        0x1a0037a0        0x0
- .rel.iplt      0x1a0037a0        0x0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+.rel.dyn        0x1a003800        0x0
+ .rel.iplt      0x1a003800        0x0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
 
-.data_RAM2      0x10080000        0x0 load address 0x1a0037a0
+.data_RAM2      0x10080000        0x0 load address 0x1a003800
  FILL mask 0xff
  *(.ramfunc.$RAM2)
  *(.ramfunc.$RamLoc40)
@@ -19312,7 +19317,7 @@ END GROUP
  *(.data.$RamLoc40*)
                 0x10080000                . = ALIGN (0x4)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a0037a0
+.data_RAM3      0x20000000        0x0 load address 0x1a003800
  FILL mask 0xff
  *(.ramfunc.$RAM3)
  *(.ramfunc.$RamAHB32)
@@ -19320,7 +19325,7 @@ END GROUP
  *(.data.$RamAHB32*)
                 0x20000000                . = ALIGN (0x4)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a0037a0
+.data_RAM4      0x20008000        0x0 load address 0x1a003800
  FILL mask 0xff
  *(.ramfunc.$RAM4)
  *(.ramfunc.$RamAHB16)
@@ -19328,7 +19333,7 @@ END GROUP
  *(.data.$RamAHB16*)
                 0x20008000                . = ALIGN (0x4)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a0037a0
+.data_RAM5      0x2000c000        0x0 load address 0x1a003800
  FILL mask 0xff
  *(.ramfunc.$RAM5)
  *(.ramfunc.$RamAHB_ETB16)
@@ -19342,7 +19347,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000       0xac load address 0x1a0037a0
+.data           0x10000000       0xac load address 0x1a003800
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -19363,7 +19368,7 @@ END GROUP
                 0x100000ac                . = ALIGN (0x4)
                 0x100000ac                _edata = .
 
-.igot.plt       0x100000ac        0x0 load address 0x1a00384c
+.igot.plt       0x100000ac        0x0 load address 0x1a0038ac
  .igot.plt      0x100000ac        0x0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
 
 .bss_RAM2       0x10080000        0x0
@@ -19462,36 +19467,36 @@ END GROUP
                 0x10000248                _end_noinit = .
                 0x10000248                PROVIDE (_pvHeapStart = .)
                 0x10008000                PROVIDE (_vStackTop = (__top_RamLoc32 - 0x0))
-                0x53ff740a                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (Reset_Handler + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0x53ff73e2                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (Reset_Handler + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa_ESP32_RAK.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x20cdc
- .debug_info    0x00000000     0x25b5 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_info    0x000025b5     0x202c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
- .debug_info    0x000045e1      0x35d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_info    0x0000493e     0x10c3 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_info    0x00005a01     0x15d2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_info    0x00006fd3     0x23f7 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_info    0x000093ca     0x1a33 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_info    0x0000adfd     0x159b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_info    0x0000c398      0xb39 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_info    0x0000ced1      0x232 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_info    0x0000d103      0xc0c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_info    0x0000dd0f      0xc97 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_info    0x0000e9a6     0x1b68 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_info    0x0001050e     0x1981 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_info    0x00011e8f      0xe77 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_info    0x00012d06      0xc8b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_info    0x00013991       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_info    0x000139d1      0xf71 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
- .debug_info    0x00014942     0x1ce4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
- .debug_info    0x00016626     0x10b9 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
- .debug_info    0x000176df     0x15ae LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
- .debug_info    0x00018c8d     0x1f80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_info    0x0001ac0d     0x3586 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_info    0x0001e193      0xc64 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
- .debug_info    0x0001edf7      0xc4e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
- .debug_info    0x0001fa45     0x1297 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+.debug_info     0x00000000    0x20d7a
+ .debug_info    0x00000000     0x2653 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_info    0x00002653     0x202c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+ .debug_info    0x0000467f      0x35d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_info    0x000049dc     0x10c3 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_info    0x00005a9f     0x15d2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_info    0x00007071     0x23f7 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_info    0x00009468     0x1a33 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_info    0x0000ae9b     0x159b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_info    0x0000c436      0xb39 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_info    0x0000cf6f      0x232 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_info    0x0000d1a1      0xc0c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_info    0x0000ddad      0xc97 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_info    0x0000ea44     0x1b68 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_info    0x000105ac     0x1981 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_info    0x00011f2d      0xe77 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_info    0x00012da4      0xc8b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_info    0x00013a2f       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_info    0x00013a6f      0xf71 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_info    0x000149e0     0x1ce4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_info    0x000166c4     0x10b9 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+ .debug_info    0x0001777d     0x15ae LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+ .debug_info    0x00018d2b     0x1f80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_info    0x0001acab     0x3586 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_info    0x0001e231      0xc64 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+ .debug_info    0x0001ee95      0xc4e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_info    0x0001fae3     0x1297 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
 
 .debug_abbrev   0x00000000     0x4b93
  .debug_abbrev  0x00000000      0x354 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
@@ -19521,350 +19526,350 @@ OUTPUT(LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa_ESP32_RAK.elf elf32-littlearm)
  .debug_abbrev  0x000045c2      0x290 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
  .debug_abbrev  0x00004852      0x341 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
 
-.debug_loc      0x00000000     0x7e85
- .debug_loc     0x00000000      0x134 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_loc     0x00000134       0x5e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
- .debug_loc     0x00000192      0x282 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_loc     0x00000414      0x653 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_loc     0x00000a67      0x10f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_loc     0x00000b76      0x659 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_loc     0x000011cf      0xfd3 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_loc     0x000021a2      0xe82 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_loc     0x00003024      0x1e2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_loc     0x00003206      0x738 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_loc     0x0000393e     0x1505 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_loc     0x00004e43      0xf38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_loc     0x00005d7b       0x15 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_loc     0x00005d90      0x109 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
- .debug_loc     0x00005e99      0xaff LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
- .debug_loc     0x00006998       0xc5 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
- .debug_loc     0x00006a5d      0x1a3 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
- .debug_loc     0x00006c00      0x91a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_loc     0x0000751a      0x3e0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_loc     0x000078fa      0x221 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
- .debug_loc     0x00007b1b      0x36a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+.debug_loc      0x00000000     0x7f0e
+ .debug_loc     0x00000000      0x1bd LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_loc     0x000001bd       0x5e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+ .debug_loc     0x0000021b      0x282 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_loc     0x0000049d      0x653 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_loc     0x00000af0      0x10f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_loc     0x00000bff      0x659 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_loc     0x00001258      0xfd3 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_loc     0x0000222b      0xe82 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_loc     0x000030ad      0x1e2 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_loc     0x0000328f      0x738 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_loc     0x000039c7     0x1505 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_loc     0x00004ecc      0xf38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_loc     0x00005e04       0x15 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_loc     0x00005e19      0x109 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_loc     0x00005f22      0xaff LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_loc     0x00006a21       0xc5 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+ .debug_loc     0x00006ae6      0x1a3 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+ .debug_loc     0x00006c89      0x91a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_loc     0x000075a3      0x3e0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_loc     0x00007983      0x221 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_loc     0x00007ba4      0x36a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
 
-.debug_aranges  0x00000000      0x9f8
+.debug_aranges  0x00000000      0xa00
  .debug_aranges
-                0x00000000       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+                0x00000000       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
  .debug_aranges
-                0x00000038       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+                0x00000040       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
  .debug_aranges
-                0x00000058       0x90 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+                0x00000060       0x90 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
  .debug_aranges
-                0x000000e8       0xe0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+                0x000000f0       0xe0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
  .debug_aranges
-                0x000001c8       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000001d0       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .debug_aranges
-                0x000001f8       0xc0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x00000200       0xc0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .debug_aranges
-                0x000002b8       0xa0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000002c0       0xa0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .debug_aranges
-                0x00000358       0xd8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x00000360       0xd8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
  .debug_aranges
-                0x00000430       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x00000438       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .debug_aranges
-                0x00000468       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x00000470       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
  .debug_aranges
-                0x00000490       0x90 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x00000498       0x90 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .debug_aranges
-                0x00000520       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x00000528       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
  .debug_aranges
-                0x00000558      0x128 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x00000560      0x128 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .debug_aranges
-                0x00000680       0xa8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x00000688       0xa8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .debug_aranges
-                0x00000728       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+                0x00000730       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
  .debug_aranges
-                0x00000748       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+                0x00000750       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
  .debug_aranges
-                0x00000768       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
+                0x00000770       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
  .debug_aranges
-                0x00000780       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+                0x00000788       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
  .debug_aranges
-                0x000007b8       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+                0x000007c0       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
  .debug_aranges
-                0x000007f8       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+                0x00000800       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
  .debug_aranges
-                0x00000820       0x48 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+                0x00000828       0x48 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
  .debug_aranges
-                0x00000868       0x70 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+                0x00000870       0x70 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
  .debug_aranges
-                0x000008d8       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x000008e0       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
  .debug_aranges
-                0x00000928       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+                0x00000930       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
  .debug_aranges
-                0x00000948       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+                0x00000950       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
  .debug_aranges
-                0x00000998       0x60 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+                0x000009a0       0x60 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
 
-.debug_ranges   0x00000000      0xab0
- .debug_ranges  0x00000000       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_ranges  0x00000040       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
- .debug_ranges  0x00000050       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_ranges  0x000000d0       0xd0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_ranges  0x000001a0       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_ranges  0x000001f0       0xf8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_ranges  0x000002e8       0xc0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_ranges  0x000003a8       0xc8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_ranges  0x00000470       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_ranges  0x00000498       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_ranges  0x000004b0       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_ranges  0x00000530       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_ranges  0x00000558      0x198 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_ranges  0x000006f0       0xb0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_ranges  0x000007a0       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_ranges  0x000007b0       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_ranges  0x000007c0       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
- .debug_ranges  0x000007e8       0xa8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
- .debug_ranges  0x00000890       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
- .debug_ranges  0x000008a8       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
- .debug_ranges  0x000008e0       0xf0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_ranges  0x000009d0       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_ranges  0x00000a10       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
- .debug_ranges  0x00000a20       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
- .debug_ranges  0x00000a60       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+.debug_ranges   0x00000000      0xab8
+ .debug_ranges  0x00000000       0x48 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_ranges  0x00000048       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+ .debug_ranges  0x00000058       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_ranges  0x000000d8       0xd0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_ranges  0x000001a8       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_ranges  0x000001f8       0xf8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_ranges  0x000002f0       0xc0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_ranges  0x000003b0       0xc8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_ranges  0x00000478       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_ranges  0x000004a0       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_ranges  0x000004b8       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_ranges  0x00000538       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_ranges  0x00000560      0x198 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_ranges  0x000006f8       0xb0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_ranges  0x000007a8       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_ranges  0x000007b8       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_ranges  0x000007c8       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_ranges  0x000007f0       0xa8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_ranges  0x00000898       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+ .debug_ranges  0x000008b0       0x38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+ .debug_ranges  0x000008e8       0xf0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_ranges  0x000009d8       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_ranges  0x00000a18       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+ .debug_ranges  0x00000a28       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_ranges  0x00000a68       0x50 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
 
-.debug_macro    0x00000000     0xdade
- .debug_macro   0x00000000      0x701 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00000701      0xaba LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000011bb       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000011dd       0x56 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00001233       0x51 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00001284       0xef LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00001373       0x6a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000013dd      0x1df LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000015bc       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000015cc       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000015ee       0x73 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00001661       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00001683       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000169f       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000016c1       0xdf LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000017a0     0x102d LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000027cd      0x11f LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000028ec      0x2c3 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00002baf      0x112 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00002cc1       0x11 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00002cd2       0x2a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00002cfc       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00002d12      0x2e6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00002ff8       0x82 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000307a      0x13d LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000031b7      0x198 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000334f       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00003383       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000033db      0x236 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00003611      0x572 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00003b83       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00003b99      0x18a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00003d23       0x88 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00003dab      0x1b9 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00003f64      0x1da LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000413e       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000417e       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000419a       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000041c8       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000041f6       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004218      0x201 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004419       0xe0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000044f9      0x34c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004845       0xdc LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004921       0xc4 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000049e5       0x8f LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004a74       0x94 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004b08       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004bc0       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004c0c       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004c22      0x328 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004f4a       0x3a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00004f84       0xd0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005054       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000506c       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000508e       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000050ce       0x64 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005132       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000514a       0x35 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000517f       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000051b3       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000051c9       0x97 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005260      0x356 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000055b6       0xf6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000056ac       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000056bc       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005714       0x1f LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005733       0x43 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005776       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005796      0x18e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005924       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005934       0xb6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000059ea       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005a00      0x129 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005b29       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005b49       0xee LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005c37       0x46 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005c7d       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005cbd       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005cd9       0x1e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005cf7       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005d07       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005d17       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005d45       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005d67       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005d77       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005d87       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005d97       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005da7       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005db7       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00005de5      0x26c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006051       0x5e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000060af       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000060c1       0xfa LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000061bb       0xee LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000062a9      0x69a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006943      0x272 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006bb5       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006bc5       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006bdb       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006bf1       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006c31       0x76 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006ca7       0x76 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006d1d       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006d2d       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006d4f       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006d65       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006d75       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006d85      0x143 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006ec8       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006ed8       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006eee       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006efe       0x7c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006f7a       0x64 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00006fde      0x1eb LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000071c9      0x2a5 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x0000746e       0x46 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000074b4       0x2a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000074de       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000074ee      0x4a6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00007994       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x000079b0       0xbe LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_macro   0x00007a6e      0x6f2 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
- .debug_macro   0x00008160       0x1d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_macro   0x0000817d      0x16e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_macro   0x000082eb       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_macro   0x000082fb       0x35 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_macro   0x00008330       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_macro   0x00008340      0x241 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_macro   0x00008581      0x105 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_macro   0x00008686       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_macro   0x0000869c      0x42b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_macro   0x00008ac7      0x43d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_macro   0x00008f04      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_macro   0x00009219      0x327 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_macro   0x00009540      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_macro   0x00009855      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_macro   0x00009b6a      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_macro   0x00009e7f      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_macro   0x0000a194      0x31b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_macro   0x0000a4af      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_macro   0x0000a7c4      0x437 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_macro   0x0000abfb      0x42b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_macro   0x0000b026       0x17 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_macro   0x0000b03d      0x45b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
- .debug_macro   0x0000b498       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
- .debug_macro   0x0000b4c0      0x464 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
- .debug_macro   0x0000b924       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
- .debug_macro   0x0000b94c      0x465 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
- .debug_macro   0x0000bdb1      0x48e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
- .debug_macro   0x0000c23f      0x49e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_macro   0x0000c6dd       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_macro   0x0000c6f9       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_macro   0x0000c70f      0x562 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_macro   0x0000cc71      0x486 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
- .debug_macro   0x0000d0f7      0x480 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
- .debug_macro   0x0000d577       0xde LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
- .debug_macro   0x0000d655      0x489 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+.debug_macro    0x00000000     0xdae4
+ .debug_macro   0x00000000      0x707 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00000707      0xaba LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000011c1       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000011e3       0x56 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00001239       0x51 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000128a       0xef LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00001379       0x6a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000013e3      0x1df LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000015c2       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000015d2       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000015f4       0x73 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00001667       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00001689       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000016a5       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000016c7       0xdf LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000017a6     0x102d LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000027d3      0x11f LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000028f2      0x2c3 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00002bb5      0x112 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00002cc7       0x11 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00002cd8       0x2a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00002d02       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00002d18      0x2e6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00002ffe       0x82 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003080      0x13d LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000031bd      0x198 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003355       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003389       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000033e1      0x236 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003617      0x572 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003b89       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003b9f      0x18a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003d29       0x88 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003db1      0x1b9 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00003f6a      0x1da LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004144       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004184       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000041a0       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000041ce       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000041fc       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000421e      0x201 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000441f       0xe0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000044ff      0x34c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000484b       0xdc LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004927       0xc4 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000049eb       0x8f LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004a7a       0x94 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004b0e       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004bc6       0x4c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004c12       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004c28      0x328 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004f50       0x3a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00004f8a       0xd0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000505a       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005072       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005094       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000050d4       0x64 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005138       0x18 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005150       0x35 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005185       0x34 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000051b9       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000051cf       0x97 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005266      0x356 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000055bc       0xf6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000056b2       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000056c2       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000571a       0x1f LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005739       0x43 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000577c       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000579c      0x18e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000592a       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000593a       0xb6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000059f0       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005a06      0x129 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005b2f       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005b4f       0xee LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005c3d       0x46 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005c83       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005cc3       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005cdf       0x1e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005cfd       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005d0d       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005d1d       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005d4b       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005d6d       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005d7d       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005d8d       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005d9d       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005dad       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005dbd       0x2e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00005deb      0x26c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006057       0x5e LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000060b5       0x12 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000060c7       0xfa LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000061c1       0xee LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000062af      0x69a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006949      0x272 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006bbb       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006bcb       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006be1       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006bf7       0x40 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006c37       0x76 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006cad       0x76 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006d23       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006d33       0x22 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006d55       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006d6b       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006d7b       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006d8b      0x143 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006ece       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006ede       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006ef4       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006f04       0x7c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006f80       0x64 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00006fe4      0x1eb LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000071cf      0x2a5 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00007474       0x46 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000074ba       0x2a LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000074e4       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000074f4      0x4a6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x0000799a       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x000079b6       0xbe LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_macro   0x00007a74      0x6f2 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+ .debug_macro   0x00008166       0x1d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_macro   0x00008183      0x16e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_macro   0x000082f1       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_macro   0x00008301       0x35 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_macro   0x00008336       0x10 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_macro   0x00008346      0x241 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_macro   0x00008587      0x105 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_macro   0x0000868c       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_macro   0x000086a2      0x42b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_macro   0x00008acd      0x43d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_macro   0x00008f0a      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_macro   0x0000921f      0x327 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_macro   0x00009546      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_macro   0x0000985b      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_macro   0x00009b70      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_macro   0x00009e85      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_macro   0x0000a19a      0x31b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_macro   0x0000a4b5      0x315 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_macro   0x0000a7ca      0x437 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_macro   0x0000ac01      0x42b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_macro   0x0000b02c       0x17 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_macro   0x0000b043      0x45b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_macro   0x0000b49e       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_macro   0x0000b4c6      0x464 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_macro   0x0000b92a       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_macro   0x0000b952      0x465 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+ .debug_macro   0x0000bdb7      0x48e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+ .debug_macro   0x0000c245      0x49e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_macro   0x0000c6e3       0x1c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_macro   0x0000c6ff       0x16 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_macro   0x0000c715      0x562 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_macro   0x0000cc77      0x486 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+ .debug_macro   0x0000d0fd      0x480 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_macro   0x0000d57d       0xde LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_macro   0x0000d65b      0x489 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
 
-.debug_line     0x00000000    0x12257
- .debug_line    0x00000000     0x12bf LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_line    0x000012bf     0x11c6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
- .debug_line    0x00002485      0x267 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_line    0x000026ec      0x65d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_line    0x00002d49      0x905 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_line    0x0000364e      0xd6e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_line    0x000043bc     0x1246 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_line    0x00005602     0x103f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_line    0x00006641      0x91f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_line    0x00006f60      0x70d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_line    0x0000766d      0xa80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_line    0x000080ed      0x794 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_line    0x00008881     0x1438 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_line    0x00009cb9      0xecb LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_line    0x0000ab84      0x81e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_line    0x0000b3a2      0x84a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_line    0x0000bbec       0x44 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_line    0x0000bc30      0x980 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
- .debug_line    0x0000c5b0      0xc38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
- .debug_line    0x0000d1e8      0x97f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
- .debug_line    0x0000db67      0xab5 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
- .debug_line    0x0000e61c      0xd43 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_line    0x0000f35f      0xd5c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_line    0x000100bb      0x951 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
- .debug_line    0x00010a0c      0xb23 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
- .debug_line    0x0001152f      0xd28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+.debug_line     0x00000000    0x122b0
+ .debug_line    0x00000000     0x1318 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_line    0x00001318     0x11c6 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+ .debug_line    0x000024de      0x267 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_line    0x00002745      0x65d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_line    0x00002da2      0x905 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_line    0x000036a7      0xd6e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_line    0x00004415     0x1246 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_line    0x0000565b     0x103f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_line    0x0000669a      0x91f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_line    0x00006fb9      0x70d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_line    0x000076c6      0xa80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_line    0x00008146      0x794 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_line    0x000088da     0x1438 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_line    0x00009d12      0xecb LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_line    0x0000abdd      0x81e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_line    0x0000b3fb      0x84a LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_line    0x0000bc45       0x44 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_line    0x0000bc89      0x980 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_line    0x0000c609      0xc38 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_line    0x0000d241      0x97f LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+ .debug_line    0x0000dbc0      0xab5 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+ .debug_line    0x0000e675      0xd43 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_line    0x0000f3b8      0xd5c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_line    0x00010114      0x951 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+ .debug_line    0x00010a65      0xb23 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_line    0x00011588      0xd28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
 
-.debug_str      0x00000000    0x29a63
- .debug_str     0x00000000    0x24896 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
-                              0x24c9d (size before relaxing)
- .debug_str     0x00024896       0x54 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+.debug_str      0x00000000    0x29a9b
+ .debug_str     0x00000000    0x248ce LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+                              0x24cd5 (size before relaxing)
+ .debug_str     0x000248ce       0x54 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
                               0x249af (size before relaxing)
- .debug_str     0x000248ea      0x212 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_str     0x00024922      0x212 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
                                0x3036 (size before relaxing)
- .debug_str     0x00024afc      0x8e4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_str     0x00024b34      0x8e4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
                                0x6d1d (size before relaxing)
- .debug_str     0x000253e0      0xdd0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_str     0x00025418      0xdd0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
                               0x1b0d7 (size before relaxing)
- .debug_str     0x000261b0      0x943 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_str     0x000261e8      0x943 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
                               0x1b75c (size before relaxing)
- .debug_str     0x00026af3      0x433 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_str     0x00026b2b      0x433 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
                               0x1730e (size before relaxing)
- .debug_str     0x00026f26      0x584 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_str     0x00026f5e      0x584 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
                               0x178af (size before relaxing)
- .debug_str     0x000274aa      0x1c9 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_str     0x000274e2      0x1c9 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
                               0x175ce (size before relaxing)
- .debug_str     0x00027673       0x42 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_str     0x000276ab       0x42 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
                               0x168cf (size before relaxing)
- .debug_str     0x000276b5      0x174 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_str     0x000276ed      0x174 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
                               0x17118 (size before relaxing)
- .debug_str     0x00027829      0x12c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_str     0x00027861      0x12c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
                               0x1766d (size before relaxing)
- .debug_str     0x00027955      0x3fc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_str     0x0002798d      0x3fc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
                               0x17b40 (size before relaxing)
- .debug_str     0x00027d51      0x360 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_str     0x00027d89      0x360 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
                               0x1777d (size before relaxing)
- .debug_str     0x000280b1       0x8c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_str     0x000280e9       0x8c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
                               0x1ad66 (size before relaxing)
- .debug_str     0x0002813d       0xb9 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_str     0x00028175       0xb9 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
                               0x1a3a9 (size before relaxing)
- .debug_str     0x000281f6       0x43 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_str     0x0002822e       0x43 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/crp.o
                                0x2e36 (size before relaxing)
- .debug_str     0x00028239       0xcd LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_str     0x00028271       0xcd LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
                               0x1b0f6 (size before relaxing)
- .debug_str     0x00028306      0x13b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_str     0x0002833e      0x13b LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
                               0x1b401 (size before relaxing)
- .debug_str     0x00028441       0x6e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+ .debug_str     0x00028479       0x6e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
                               0x1a955 (size before relaxing)
- .debug_str     0x000284af      0x48e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+ .debug_str     0x000284e7      0x48e LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
                               0x1b5e3 (size before relaxing)
- .debug_str     0x0002893d      0x1dd LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_str     0x00028975      0x1dd LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
                               0x1b917 (size before relaxing)
- .debug_str     0x00028b1a      0x756 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_str     0x00028b52      0x756 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
                               0x21293 (size before relaxing)
- .debug_str     0x00029270       0x2d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+ .debug_str     0x000292a8       0x2d LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
                               0x1a923 (size before relaxing)
- .debug_str     0x0002929d      0x5a0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_str     0x000292d5      0x5a0 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
                               0x1ac8d (size before relaxing)
- .debug_str     0x0002983d      0x226 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+ .debug_str     0x00029875      0x226 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
                               0x1b381 (size before relaxing)
 
 .comment        0x00000000       0x68
@@ -20007,57 +20012,57 @@ OUTPUT(LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa_ESP32_RAK.elf elf32-littlearm)
  .ARM.attributes
                 0x00000a83       0x34 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-msizer.o)
 
-.debug_frame    0x00000000     0x2088
- .debug_frame   0x00000000       0x84 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
- .debug_frame   0x00000084       0x2c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
- .debug_frame   0x000000b0      0x114 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_frame   0x000001c4      0x1d8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
- .debug_frame   0x0000039c       0x5c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_frame   0x000003f8      0x204 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_frame   0x000005fc      0x198 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_frame   0x00000794      0x278 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_frame   0x00000a0c       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_frame   0x00000a8c       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_frame   0x00000abc      0x178 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_frame   0x00000c34       0x70 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_frame   0x00000ca4      0x31c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_frame   0x00000fc0      0x1f4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_frame   0x000011b4       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_frame   0x000011d4       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_frame   0x000011fc       0x74 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
- .debug_frame   0x00001270       0xb4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
- .debug_frame   0x00001324       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
- .debug_frame   0x0000137c       0x84 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
- .debug_frame   0x00001400      0x120 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
- .debug_frame   0x00001520       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_frame   0x000015d8       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
- .debug_frame   0x00001600       0xec LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
- .debug_frame   0x000016ec       0xfc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
- .debug_frame   0x000017e8       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00001814       0x34 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00001848       0x5c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fflush.o)
- .debug_frame   0x000018a4      0x14c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
- .debug_frame   0x000019f0       0x54 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fwalk.o)
- .debug_frame   0x00001a44       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00001a70       0xb0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
- .debug_frame   0x00001b20       0x28 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00001b48       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x00001b68       0x38 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00001ba0       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00001bd0       0xac c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x00001c7c       0x60 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00001cdc       0x74 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-printf.o)
- .debug_frame   0x00001d50       0x3c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-puts.o)
- .debug_frame   0x00001d8c       0x6c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-sprintf.o)
- .debug_frame   0x00001df8       0x88 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
- .debug_frame   0x00001e80       0x40 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wbuf.o)
- .debug_frame   0x00001ec0       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wsetup.o)
- .debug_frame   0x00001eec       0x58 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-makebuf.o)
- .debug_frame   0x00001f44       0x28 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x00001f6c       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x00001f9c       0x3c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00001fd8       0x90 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x00002068       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-msizer.o)
+.debug_frame    0x00000000     0x20a4
+ .debug_frame   0x00000000       0xa0 LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
+ .debug_frame   0x000000a0       0x2c LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/leer_adc.o
+ .debug_frame   0x000000cc      0x114 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_frame   0x000001e0      0x1d8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sys_newlib//src/system.o
+ .debug_frame   0x000003b8       0x5c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_frame   0x00000414      0x204 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_frame   0x00000618      0x198 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_frame   0x000007b0      0x278 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_frame   0x00000a28       0x80 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_frame   0x00000aa8       0x30 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_frame   0x00000ad8      0x178 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_frame   0x00000c50       0x70 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_frame   0x00000cc0      0x31c LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_frame   0x00000fdc      0x1f4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_frame   0x000011d0       0x20 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_frame   0x000011f0       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_frame   0x00001218       0x74 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_frame   0x0000128c       0xb4 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_gpio.o
+ .debug_frame   0x00001340       0x58 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_adc.o
+ .debug_frame   0x00001398       0x84 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_tick.o
+ .debug_frame   0x0000141c      0x120 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/src/sapi_uart.o
+ .debug_frame   0x0000153c       0xb8 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_frame   0x000015f4       0x28 LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/board/src/sapi_board.o
+ .debug_frame   0x0000161c       0xec LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/abstract_modules/src/sapi_delay.o
+ .debug_frame   0x00001708       0xfc LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/temperature_humudity/dht11/src/sapi_dht11.o
+ .debug_frame   0x00001804       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00001830       0x34 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00001864       0x5c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fflush.o)
+ .debug_frame   0x000018c0      0x14c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-findfp.o)
+ .debug_frame   0x00001a0c       0x54 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x00001a60       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00001a8c       0xb0 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
+ .debug_frame   0x00001b3c       0x28 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00001b64       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00001b84       0x38 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00001bbc       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00001bec       0xac c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x00001c98       0x60 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00001cf8       0x74 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-printf.o)
+ .debug_frame   0x00001d6c       0x3c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-puts.o)
+ .debug_frame   0x00001da8       0x6c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x00001e14       0x88 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-stdio.o)
+ .debug_frame   0x00001e9c       0x40 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x00001edc       0x2c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x00001f08       0x58 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x00001f60       0x28 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00001f88       0x30 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00001fb8       0x3c c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00001ff4       0x90 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00002084       0x20 c:/users/nacho/desktop/tp1/cia/tools/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-msizer.o)
 
 Cross Reference Table
 
@@ -21125,6 +21130,7 @@ display7SegmentWrite                              LoRa/LoraESP/LoRa_ESP32_RAK/ou
 display7SegmentWriteHex                           LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/display/drivers/LED_Segments/7segment/sapi_7_segment_display.o
 display7SegmentWriteIndex                         LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/display/drivers/LED_Segments/7segment/sapi_7_segment_display.o
 display7SegmentWriteInt                           LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/display/drivers/LED_Segments/7segment/sapi_7_segment_display.o
+dormir_bajo_consumo                               LoRa/LoraESP/LoRa_ESP32_RAK/out/LoRa/LoraESP/LoRa_ESP32_RAK/src/test_main.o
 dropBitmap                                        LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/display/fonts/chars_5x8px/icon_chars_5x8px.o
 dropChar                                          LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/sapi/sapi_v0.6.2/external_peripherals/display/fonts/chars_5x8px/icon_chars_5x8px.o
 editLineInit                                      LoRa/LoraESP/LoRa_ESP32_RAK/out/libs/editline//src/editline.o
